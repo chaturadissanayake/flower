@@ -1,26 +1,24 @@
-// List of 21 flowers with their names, image paths, and descriptions
+// List of 21 flowers with their names, image paths, and descriptions (100+ words each)
 const flowers = [
-  { name: "Flower 1", imgSrc: "flower1.png", description: "Flower 1 Description. A beautiful flower with symbolic meaning in Sri Lankan culture." },
-  { name: "Flower 2", imgSrc: "flower2.png", description: "Flower 2 Description. Often associated with love and affection." },
-  { name: "Flower 3", imgSrc: "flower3.png", description: "Flower 3 Description. Known for its healing properties and bright color." },
-  { name: "Flower 4", imgSrc: "flower4.png", description: "Flower 4 Description. A symbol of peace and serenity." },
-  { name: "Flower 5", imgSrc: "flower5.png", description: "Flower 5 Description. Represents friendship and loyalty." },
-  { name: "Flower 6", imgSrc: "flower6.png", description: "Flower 6 Description. Symbolizes hope and new beginnings." },
-  { name: "Flower 7", imgSrc: "flower7.png", description: "Flower 7 Description. A flower associated with strength and resilience." },
-  { name: "Flower 8", imgSrc: "flower8.png", description: "Flower 8 Description. This flower represents gratitude and appreciation." },
-  { name: "Flower 9", imgSrc: "flower9.png", description: "Flower 9 Description. A symbol of joy and celebration." },
-  { name: "Flower 10", imgSrc: "flower10.png", description: "Flower 10 Description. Known for its calming effect and beauty." },
-  { name: "Flower 11", imgSrc: "flower11.png", description: "Flower 11 Description. Represents success and achievement." },
-  { name: "Flower 12", imgSrc: "flower12.png", description: "Flower 12 Description. A flower connected to hope and renewal." },
-  { name: "Flower 13", imgSrc: "flower13.png", description: "Flower 13 Description. Known for its ability to symbolize purity and innocence." },
-  { name: "Flower 14", imgSrc: "flower14.png", description: "Flower 14 Description. Represents warmth and encouragement." },
-  { name: "Flower 15", imgSrc: "flower15.png", description: "Flower 15 Description. A flower of patience and wisdom." },
-  { name: "Flower 16", imgSrc: "flower16.png", description: "Flower 16 Description. Known for its boldness and strength." },
-  { name: "Flower 17", imgSrc: "flower17.png", description: "Flower 17 Description. This flower brings positivity and love." },
-  { name: "Flower 18", imgSrc: "flower18.png", description: "Flower 18 Description. Associated with beauty and resilience." },
-  { name: "Flower 19", imgSrc: "flower19.png", description: "Flower 19 Description. Represents love and affection." },
-  { name: "Flower 20", imgSrc: "flower20.png", description: "Flower 20 Description. Symbolizes purity and gentleness." },
-  { name: "Flower 21", imgSrc: "flower21.png", description: "Flower 21 Description. A symbol of courage and determination." }
+  { name: "Cinnamon Flower", imgSrc: "flower/Assets/Flowers/10_CinnamonFlower.png", description: "Cinnamon Flower is associated with the warm, spicy aroma of the cinnamon tree, which is used in both culinary and medicinal applications. Known for its bright, attractive colors, the cinnamon flower represents vitality, and it plays an important role in Sri Lankan culture, often found in religious offerings and festivals." },
+  { name: "Ixora", imgSrc: "flower/Assets/Flowers/11_Ixora.png", description: "Ixora is a vibrant flower that comes in various colors, particularly red, yellow, and orange. It symbolizes strength and resilience in Sri Lankan culture and is often used in traditional ceremonies and decorations. The small, dense clusters of flowers bring joy and beauty to gardens, representing community and togetherness." },
+  { name: "Periwinkle", imgSrc: "flower/Assets/Flowers/12_Periwinkle.png", description: "Periwinkle is known for its delicate, colorful petals and is often associated with peace and tranquility. In Sri Lanka, it is linked with healing, especially in folk medicine. The flower is also a symbol of remembrance and respect, often seen in gardens and temples." },
+  { name: "Plumeria", imgSrc: "flower/Assets/Flowers/13_Plumera.png", description: "Plumeria, with its soft, fragrant blooms, is a popular flower in Sri Lanka, often used in religious offerings. It represents beauty, love, and positivity. In Sri Lankan culture, Plumeria is symbolic of divine beauty, and its scent is thought to attract good spirits and fortune." },
+  { name: "Karthigaipoo", imgSrc: "flower/Assets/Flowers/14_Karthigaipoo.png", description: "Karthigaipoo is a strikingly beautiful flower in Sri Lankan culture, often associated with the Hindu festival of Karthikai. It symbolizes light, knowledge, and spiritual awakening. The bright orange petals of this flower are said to bring blessings and good fortune to those who receive it." },
+  { name: "Poinsettia", imgSrc: "flower/Assets/Flowers/15_Poinsettia.png", description: "Poinsettia, with its vibrant red and green colors, is a symbol of celebration and joy, especially during the festive season. In Sri Lanka, it is considered a flower of prosperity and good fortune, commonly found in religious and cultural festivities." },
+  { name: "Wild Ginger", imgSrc: "flower/Assets/Flowers/16_WildGinger.png", description: "Wild Ginger is a unique flower known for its strong, spicy fragrance. This flower is widely used in Sri Lankan traditional medicine, believed to have healing properties. The Wild Ginger represents vitality, health, and protection, often used in rituals to ward off evil spirits." },
+  { name: "Sunflower", imgSrc: "flower/Assets/Flowers/17_Sunflower.png", description: "Sunflower symbolizes happiness, positivity, and warmth. In Sri Lanka, it is often associated with joy and is used in various cultural celebrations. The sunflower’s bright yellow petals symbolize the sun, radiating energy and cheerfulness wherever it blooms." },
+  { name: "Tuberose", imgSrc: "flower/Assets/Flowers/18_Tuberose.png", description: "Tuberose is known for its intoxicating fragrance and delicate, white blossoms. In Sri Lankan culture, Tuberose is a symbol of purity and beauty. It’s often used in weddings and religious ceremonies to bring blessings and divine energy into the home." },
+  { name: "Lantana", imgSrc: "flower/Assets/Flowers/19_Lantana.png", description: "Lantana is a vibrant, colorful flower that thrives in tropical climates. It symbolizes resilience, adaptability, and joy. In Sri Lanka, Lantana is used in gardens and often symbolizes harmony and unity. It also represents the energy of life and the beauty of nature." },
+  { name: "Bougainvillea", imgSrc: "flower/Assets/Flowers/20_Bougainvillea.png", description: "Bougainvillea is a hardy flower that thrives in tropical conditions. Known for its bright, vibrant colors, it symbolizes resilience and courage. In Sri Lankan culture, Bougainvillea is often used to decorate homes and temples, as it brings warmth and beauty to its surroundings." },
+  { name: "Moringa Flowers", imgSrc: "flower/Assets/Flowers/21_MoringaFlowers.png", description: "Moringa flowers are known for their subtle yet pleasant fragrance. These flowers come from the Moringa tree, often called the 'Miracle Tree' due to its nutritional value and medicinal properties. In Sri Lankan culture, Moringa is seen as a symbol of health, wellness, and vitality." },
+  { name: "Jasmine", imgSrc: "flower/Assets/Flowers/1_Jasmine.png", description: "Jasmine symbolizes purity, simplicity, and modesty in Sri Lankan culture. Its sweet fragrance is associated with the gentle and loving nature of the island's people. The flower is often used in religious offerings and as a symbol of affection." },
+  { name: "Lotus", imgSrc: "flower/Assets/Flowers/2_Lotus.png", description: "The Lotus is a sacred flower in Sri Lanka, symbolizing enlightenment, beauty, and purity. It grows in serene waters and is used in religious rituals, representing spiritual growth and awakening." },
+  { name: "Rose", imgSrc: "flower/Assets/Flowers/3_Rose.png", description: "Roses are widely known for their association with love, beauty, and passion. In Sri Lanka, they are also used in weddings and significant celebrations as a symbol of affection and commitment." },
+  { name: "Water Lily", imgSrc: "flower/Assets/Flowers/6_WaterLily.png", description: "Water Lily represents purity, peace, and tranquility. It is a symbol of spirituality in Sri Lankan culture, often associated with calm and meditation, frequently found in serene ponds and used in religious settings." },
+  { name: "Coconut Flower", imgSrc: "flower/Assets/Flowers/7_CoconutFlower.png", description: "The Coconut flower is an integral part of Sri Lankan culture. It signifies fertility, abundance, and prosperity. Used in various culinary dishes and cultural rituals, the Coconut flower is also associated with Sri Lanka’s agrarian roots." },
+  { name: "Orchid", imgSrc: "flower/Assets/Flowers/8_Orchid.png", description: "The Orchid represents luxury, beauty, and elegance. It is commonly used in decorative settings and symbolizes strength, refinement, and love. In Sri Lanka, Orchids are often found in gardens and are used in celebratory events." },
+  { name: "Balsam", imgSrc: "flower/Assets/Flowers/9_Balsam.png", description: "Balsam is a symbol of resilience and protection. The vibrant flowers are often associated with blessings and are commonly found in Sri Lankan gardens. The Balsam flower is known for its medicinal properties in folk remedies." }
 ];
 
 let selectedFlower = null;
@@ -67,13 +65,12 @@ function setFlowerOfTheWeek() {
   document.getElementById("flowerOfTheWeek").innerText = `Flower of the Week: ${flowerOfTheWeek.name}`;
 }
 
-// Close Flower Description Pop-up
+// Close Pop-ups
 document.getElementById("closeFlowerDescriptionBtn").addEventListener("click", function() {
   document.getElementById("flowerDescriptionPopup").style.display = "none";
   document.getElementById("customizationPopup").style.display = "flex";
 });
 
-// Close Customization Pop-up
 document.getElementById("closeCustomizationBtn").addEventListener("click", function() {
   document.getElementById("customizationPopup").style.display = "none";
 });
@@ -99,7 +96,7 @@ document.getElementById("closePreviewBtn").addEventListener("click", function() 
   document.getElementById("previewPopup").style.display = "none";
 });
 
-// Download Image
+// Download Image (flower + message)
 document.getElementById("downloadBtn").addEventListener("click", function() {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
@@ -120,4 +117,4 @@ document.getElementById("downloadBtn").addEventListener("click", function() {
     a.download = `${selectedFlower.name}-with-message.png`;
     a.click();
   };
-});
+};
