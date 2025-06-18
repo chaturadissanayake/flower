@@ -45,6 +45,15 @@ section {
   margin: 0 auto;
 }
 
+.spacing {
+  height: 40px;
+}
+
+#pickFlowerTitle {
+  text-align: center;
+  font-size: 2em;
+}
+
 .flower-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
