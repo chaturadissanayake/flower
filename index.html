@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Flower Bouquet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Homepage Section -->
+  <div id="homepage">
+    <header>
+      <h1>Bloom & Share</h1>
+      <p>Send a flower, brighten someone's day.</p>
+      <button id="pickFlowerBtn">Pick Your Flower</button>
+      <h3 id="flowerOfTheWeek"></h3> <!-- Display Flower of the Week -->
+    </header>
+  </div>
+
+  <!-- Flower Selection Pop-up -->
+  <div id="flowerSelectionPopup" class="popup">
+    <div class="popup-content">
+      <button id="closeFlowerSelectionBtn" class="close-btn">X</button>
+      <h2>Select Your Flower</h2>
+      <div class="flower-grid">
+        <!-- Dynamically filled with flowers -->
+      </div>
+      <button id="selectFlowerBtn" disabled>Select</button>
+    </div>
+  </div>
+
+  <!-- Flower Description Pop-up -->
+  <div id="flowerDescriptionPopup" class="popup">
+    <div class="popup-content">
+      <button id="closeFlowerDescriptionBtn" class="close-btn">X</button>
+      <h2>Flower Description</h2>
+      <p id="flowerDescriptionText"></p>
+      <button id="closeFlowerDescriptionBtn" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Customization Pop-up -->
+  <div id="customizationPopup" class="popup">
+    <div class="popup-content">
+      <button id="closeCustomizationBtn" class="close-btn">X</button>
+      <h2>Customize Your Flower</h2>
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" placeholder="Write a message..."></textarea>
+      <button id="previewBtn">Preview Flower & Message</button>
+    </div>
+  </div>
+
+  <!-- Preview Pop-up -->
+  <div id="previewPopup" class="popup">
+    <div class="popup-content">
+      <button id="closePreviewBtn" class="close-btn">X</button>
+      <h2>Preview</h2>
+      <div id="previewContent">
+        <!-- Preview of flower and message -->
+      </div>
+      <button id="downloadBtn">Download Image</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p><a href="#">About</a> | <a href="#">FAQs</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
