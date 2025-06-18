@@ -51,8 +51,8 @@ button:hover {
 
 .flower-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); /* 3 flowers per row */
+  gap: 20px;
 }
 
 .flower-image {
@@ -98,6 +98,6 @@ footer a:hover {
 /* Mobile View Styles */
 @media screen and (max-width: 768px) {
   .flower-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 flowers per row */
   }
 }
