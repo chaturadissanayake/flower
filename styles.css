@@ -101,3 +101,11 @@ footer a:hover {
     grid-template-columns: repeat(2, 1fr); /* 2 flowers per row */
   }
 }
+
+/* Project Description Text - Adjust margins */
+#projectDescriptionText {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 800px;
+  line-height: 1.6;
+}
