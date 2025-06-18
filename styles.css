@@ -94,3 +94,10 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Mobile View Styles */
+@media screen and (max-width: 768px) {
+  .flower-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
