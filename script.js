@@ -98,24 +98,4 @@ document.getElementById("closePreviewBtn").addEventListener("click", function() 
 });
 
 // Download Image (flower + message)
-document.getElementById("downloadBtn").addEventListener("click", function() {
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
-  const img = new Image();
-  
-  img.src = selectedFlower.imgSrc;
-  img.onload = function() {
-    canvas.width = img.width;
-    canvas.height = img.height + 100; // Space for message
-    
-    ctx.drawImage(img, 0, 0);
-    ctx.font = "20px Arial";
-    ctx.fillText(document.getElementById("message").value, 10, img.height + 30);
-    
-    const dataUrl = canvas.toDataURL("image/png");
-    const a = document.createElement("a");
-    a.href = dataUrl;
-    a.download = `${selectedFlower.name}-with-message.png`;
-    a.click();
-  };
-};
+document.getElementById("downloadBtn").addEventListener("
