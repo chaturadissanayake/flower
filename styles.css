@@ -61,7 +61,8 @@ section {
 
 .flower-image {
   width: 100%;
-  max-width: 120px; /* Smaller image size for better performance */
+  max-width: 150px; /* Uniform image size */
+  height: auto;
   transition: transform 0.3s ease;
 }
 
