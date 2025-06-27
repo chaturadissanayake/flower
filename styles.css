@@ -814,3 +814,187 @@ footer {
   }
 }
 
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .sticky-header {
+    height: 80px;
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sticky-right {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .sticky-right nav {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .sticky-right nav a {
+    font-size: 0.95rem;
+    padding: 4px 8px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 8px;
+  }
+
+  /* Hero section */
+  .hero-wrapper {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  /* Slideshow */
+  .slideshow-container {
+    height: 300px;
+  }
+
+  .slide img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  /* About section */
+  #about-section {
+    padding: 40px 20px;
+  }
+
+  #about-section p {
+    text-align: left;
+  }
+
+  /* Search & Filter */
+  .search-filter-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Flower grid */
+  .flower-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .flower-item {
+    max-width: 100%;
+  }
+
+  .flower-image {
+    max-width: 100%;
+    height: 250px;
+  }
+
+  /* Wisdom section */
+  .wisdom-cards {
+    height: auto;
+    min-height: 180px;
+  }
+
+  .wisdom-text {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  /* Reviews section */
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .review {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px 0;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-title {
+    font-size: 1.5rem;
+  }
+  
+  .sticky-right nav a {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+  }
+  
+  .social-icons a svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .filter-buttons {
+    gap: 5px;
+  }
+  
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .flower-image {
+    height: 220px;
+  }
+  
+  .wisdom-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== EXISTING DESKTOP STYLES (REMAIN UNCHANGED) ===== */
+/* All previous CSS content remains exactly the same */
+/* Only mobile optimisations added above */
