@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +9,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Original Sticky Header -->
+  <!-- Sticky Header -->
   <header class="sticky-header" id="stickyHeader">
     <div class="sticky-left">
       <div class="sticky-title">Bloom & Share</div>
     </div>
     <div class="sticky-right">
+      <nav>
+        <a href="#about-section">About</a>
+        <a href="#flowerGrid">Flowers</a>
+        <a href="#wisdom-section">Wisdom</a>
+      </nav>
       <div class="social-icons">
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/chaturadissanayake/" target="_blank" aria-label="Instagram">
           <svg width="24" height="24" fill="#EC5EAB" viewBox="0 0 24 24"><path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0120.5 7.75v8.5a4.25 4.25 0 01-4.25 4.25h-8.5a4.25 4.25 0 01-4.25-4.25v-8.5A4.25 4.25 0 017.75 3.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm5.25-.88a.88.88 0 11-1.76 0 .88.88 0 011.76 0z"/></svg>
         </a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <a href="https://x.com/atakatus" target="_blank" aria-label="Twitter">
           <svg width="24" height="24" fill="#EC5EAB" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.22 4.22 0 001.85-2.33 8.36 8.36 0 01-2.66 1.02 4.18 4.18 0 00-7.13 3.81 11.87 11.87 0 01-8.61-4.37 4.18 4.18 0 001.29 5.58 4.16 4.16 0 01-1.89-.52v.05a4.18 4.18 0 003.35 4.1 4.18 4.18 0 01-1.88.07 4.19 4.19 0 003.91 2.91A8.38 8.38 0 012 19.54a11.81 11.81 0 006.29 1.84c7.55 0 11.69-6.26 11.69-11.69 0-.18 0-.35-.01-.53A8.36 8.36 0 0022.46 6z"/></svg>
         </a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <a href="www.linkedin.com/in/chaturadissanayake" target="_blank" aria-label="LinkedIn">
           <svg width="24" height="24" fill="#EC5EAB" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98s1.98-.88 1.98-1.98A1.98 1.98 0 004.98 3.5zM3.5 8.5h3v12h-3v-12zm5 0h2.89v1.64h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.55 1.97 3.55 4.54v7.36h-3v-6.52c0-1.56-.03-3.58-2.18-3.58-2.18 0-2.51 1.7-2.51 3.46v6.64h-3v-12z"/></svg>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Corrected Slideshow Paths -->
+  <!-- Slideshow -->
   <div class="slideshow-container">
     <div class="slideshow">
       <img src="Assets/Slides/slide1.webp" class="slide active" alt="Garden Slide 1">
@@ -42,96 +48,145 @@
     </div>
   </div>
 
-  <!-- Original Hero Message -->
+  <!-- Hero Message -->
   <section class="hero-wrapper">
     <h1 class="hero-title">Bloom & Share</h1>
     <p class="hero-subtext">Step into a digital garden where every flower carries a whisper of care, a note of meaning, and a moment to be shared.</p>
     <p class="hero-feature">This Week's Favourite Flower: <span id="bloomNameTop" class="flower-name-big">Tuberose</span></p>
-    <div class="wisdom-container">
-      <p class="wisdom-text">"Jasmine symbolizes purity and grace in many traditions, often used in ceremonies and celebrations."</p>
-    </div>
   </section>
   
-  <!-- Updated About Section Only -->
+  <!-- About Section -->
   <section id="about-section">
     <h2>About This Garden</h2>
     <div id="aboutText">
-      <p>Bloom & Share is a digital space born from a very analogue tradition the act of giving flowers. Flowers have always carried layered meanings in cultures worldwide, including Sri Lanka: purity, celebration, remembrance, and healing.</p>
-      
+
+    <p>Bloom & Share is a digital platform that reimagines the age-old tradition of giving flowers, drawing inspiration from Sri Lanka's rich cultural tapestry. In many cultures, flowers symbolise a multitude of sentiments, including purity, celebration, remembrance, and healing. With this platform, we aim to preserve and enhance that tradition in a modern digital context. The core idea behind Bloom & Share is profound yet straightforward: choose a flower, pair it with a personal message, and share it digitally. Each flower represents a deeper story and possesses significant meaning specific to Sri Lankan society.</p>
+
       <div class="extra-about hidden">
-        <p>The core idea is simple: choose a flower, pair it with a short message, and send it digitally. But the thinking behind it is layered. The flowers featured here are not random each one has a story. Many are native or deeply symbolic in Sri Lankan society.</p>
         
-        <p>Design-wise, the platform follows a minimalist and deliberate aesthetic. White space is used not to fill, but to breathe. Illustrations are soft, avoiding overly saturated stock visuals. Typography is chosen to evoke both clarity and a sense of hand-touched intention.</p>
-        
-        <p>Bloom & Share was conceived with a simple yet powerful vision: to create a space where people could connect, express their emotions, and send thoughtful gestures of love and appreciation through the beauty of flowers. In the digital age, where physical distance often separates us, this project seeks to bridge the gap by offering a unique, interactive experience that brings the timeless tradition of giving flowers into the modern world.</p>
-        
-        <p>The idea began as a way to celebrate the cultural significance of flowers, particularly those native to Sri Lanka. Each flower carries with it a story, a meaning, and a deep connection to the island's rich cultural tapestry. By allowing users to pick a flower, customise a message, and send it as a virtual bouquet, we provide a personalised and meaningful way to share emotions—love, gratitude, sympathy, or joy.</p>
-        
-        <p>At its heart, Bloom & Share is more than just a website; it is a digital garden where users can explore a curated collection of Sri Lankan flowers, each with unique characteristics and symbolism. From the delicate jasmine to the vibrant lotus, every flower represents a specific sentiment, allowing users to express themselves in an impactful way.</p>
-        
-        <p>We understand that flowers have the power to convey messages that words alone cannot. A single bloom can speak volumes, whether it's a celebration of a special occasion or a simple gesture to brighten someone's day. Our goal is to make this experience accessible to anyone, regardless of location, by bringing the beauty and symbolism of flowers to the digital space.</p>
-        
-        <p>Bloom & Share is not just about sending flowers; it's about fostering connections. The project was designed to create a lasting emotional impact. It offers people a platform to communicate their thoughts and feelings in a personal, intimate, yet universal way. Through our website, users can send flowers and learn about their meanings, deepen their understanding of cultural traditions, and engage with a growing community of flower enthusiasts.</p>
-        
-        <p>The project is built on the belief that flowers can bring joy, healing, and positivity, no matter where they are. Using watercolour illustrations, we ensure that the site has a soft, inviting aesthetic that aligns with the serene beauty of nature. The minimalist design highlights the flowers, allowing users to immerse themselves in the experience without distraction. We hope every site visit feels like stepping into a garden—a place where beauty and emotion flourish together.</p>
-        
-        <p>Each flower on the site has been carefully selected to reflect the natural beauty of Sri Lankan flora and its emotional significance. Whether for a wedding, a birthday, a moment of sympathy, or to say "I'm thinking of you," our flowers offer the perfect way to convey a message of warmth and affection.</p>
-        
-        <p>As Bloom & Share evolves, we aim to expand our offerings and enhance the user experience, creating new ways for people to share their stories through the language of flowers. Our commitment is to ensure that every interaction with the site feels special, meaningful, and memorable.</p>
-      </div>
+    <p>The design philosophy behind Bloom & Share is rooted in minimalism. By using ample white space, we aspire to cultivate a sense of calm and clarity. Our choice of soft illustrations avoids the overwhelming nature of overly saturated stock visuals, while the typography is carefully selected to evoke a personal touch that resonates with users. This aesthetic not only complements the beauty of the flowers but also enhances the emotional experience we provide.</p>
+
+    <p>At the heart of Bloom & Share is a powerful vision to create a space for connection, emotional expression, and the thoughtful exchange of love and appreciation through flowers. In our increasingly digital world, physical distance can hinder our ability to connect with loved ones. Bloom & Share aims to bridge this gap by offering an interactive and unique experience that brings the timeless tradition of flower gifting into the contemporary era. Through our platform, we enable you to foster emotional connections, allowing you to feel closer to those you care about, no matter the distance.</p>
+
+    <p>The idea behind Bloom & Share originated from a desire to celebrate the cultural significance of flowers, particularly those native to Sri Lanka. Each flower we showcase carries a unique story and connects to the island's rich cultural heritage. By enabling users to choose a flower, customise a message, and send it as a virtual bouquet, we offer a meaningful and personalised way to express feelings of love, gratitude, sympathy, or joy.</p>
+
+    <p>Bloom & Share serves as more than just a website; it operates as a digital garden where users can explore a curated collection of Sri Lankan flowers, each distinct in characteristics and symbolism. From the delicate allure of jasmine to the vibrant presence of lotus, every flower embodies a specific sentiment, enabling users to express themselves with depth and intention.</p>
+
+    <p>Flowers possess a unique ability to convey emotions that words sometimes cannot adequately express. A single bloom can encapsulate a myriad of feelings, whether celebrating a special occasion or brightening someone's day. Our mission is to make this experience accessible to all, regardless of their circumstances or location. We are dedicated to bringing the beauty and symbolism of flowers into the digital realm, allowing everyone to experience the joy they bring.</p>
+
+    <p>Bloom & Share is about more than sending flowers; it's an endeavour to nurture meaningful connections. We aim to create a lasting emotional impact by providing a platform for personal expression that is both intimate and universal. Through our site, users not only send flowers but also learn about their meanings, deepen their appreciation of cultural traditions, and engage with a vibrant community of flower enthusiasts.</p>
+
+    <p>Founded on the belief that flowers can facilitate joy, healing, and positivity, Bloom & Share employs watercolour illustrations to craft a soft, inviting aesthetic that mirrors the serene beauty of nature. Our minimalist design draws focus to the flowers themselves, encouraging users to immerse themselves in the experience without distraction. We intend for every visit to feel like an enchanting walk through a garden where beauty and emotion intertwine.</p>
+
+    <p>Each flower selected for our platform reflects the natural beauty of Sri Lankan flora alongside its emotional significance. Whether it is for a wedding, birthday, moment of sympathy, or to say "I am thinking of you," our flowers serve as the perfect means to deliver warmth and affection. As Bloom & Share continues to evolve, we aspire to broaden our offerings and enhance the user experience, discovering innovative ways for people to share their stories through the language of flowers. We are committed to ensuring that every interaction with our site feels memorable, meaningful, and unforgettable. Your engagement is highly valued, and we are devoted to creating a platform that meets your needs and exceeds your expectations.</p>
+    
     </div>
     <button id="readMoreBtn" class="read-more">View More</button>
   </section>
   
-  <!-- Original Flower Grid -->
-  <h2 id="pickFlowerTitle">Choose Your Bloom</h2>
+  <!-- Flower Grid -->
   <div class="container">
+    <div class="search-filter-container">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search flowers...">
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="filter-buttons">
+  <button class="filter-btn active" data-filter="all">All Flowers</button>
+  <button class="filter-btn" data-filter="fragrant">Fragrant</button>
+  <button class="filter-btn" data-filter="symbolism">Symbolic</button>
+  <button class="filter-btn" data-filter="native">Native</button>
+  <button class="filter-btn" data-filter="rare">Rare</button>
+</div>
+    </div>
+    
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-spinner"></div>
+      <p>Loading beautiful flowers...</p>
+    </div>
+    
+    <h2 id="pickFlowerTitle">Choose Your Bloom</h2>
     <div id="flowerGrid" class="flower-grid">
       <!-- Flowers will be dynamically loaded here -->
     </div>
-    <div id="flowerFallback" class="fallback-message" style="display: none;">
-      No flowers available at the moment. Please check back later.
+    <div id="noResultsMessage" class="no-results-message" style="display: none;">
+      No flowers found matching your search. Try different keywords.
     </div>
   </div>
   
-  <!-- Original Flower Description Popup -->
-  <div id="flowerDescriptionPopup" class="popup">
-    <div class="popup-content">
-      <button class="close-btn" id="closeFlowerDescriptionBtn">&times;</button>
-      <h3 id="popupFlowerName">Flower Name</h3>
-      <div class="flower-image-container">
-        <img id="popupFlowerImage" src="" alt="Flower Image" class="popup-flower-img">
+  <!-- Wisdom Section -->
+  <section id="wisdom-section">
+    <h2>Flower Wisdom</h2>
+    <div class="wisdom-cards">
+      <div class="wisdom-card active">
+        <p class="wisdom-text">Jasmine is often used in perfumes and aromatherapy, symbolizing purity and grace, with a sweet fragrance that promotes relaxation.</p>
       </div>
-      <p id="flowerDescriptionText">Flower description will appear here.</p>
-      <h4>Whisper a Note with Your Flower</h4>
-      <textarea id="customMessage" placeholder="Write a short message of love, hope or gratitude..."></textarea>
-      <select id="templateSelector">
-        <option value="">-- Choose a prewritten message --</option>
-        <option value="Thinking of you today.">Thinking of you today.</option>
-        <option value="This bloom carries a piece of my heart.">This bloom carries a piece of my heart.</option>
-        <option value="A quiet reminder that you're not alone.">A quiet reminder that you're not alone.</option>
-      </select>
-      <button class="share-btn" onclick="shareFlower()">Send this Bloom</button>
-    </div>
-  </div>
-
-  <!-- Original Share Popup -->
-  <div id="shareConfirmationPopup" class="popup">
-    <div class="popup-content">
-      <button class="close-btn" onclick="closeSharePopup()">&times;</button>
-      <p>Your Bloom has been created:</p>
-      <textarea id="finalMessage" readonly></textarea>
-      <div class="share-actions">
-        <button class="share-btn" onclick="copyToClipboard()">Copy Message</button>
-        <button class="share-btn secondary" onclick="closeSharePopup()">Close</button>
+      <div class="wisdom-card">
+        <p class="wisdom-text">Lotus is a symbol of spiritual enlightenment and purity, blooming beautifully even in muddy waters, representing resilience and transformation.</p>
+      </div>
+      <div class="wisdom-card">
+        <p class="wisdom-text">Hibiscus is known for its vibrant colors, often symbolizing delicate beauty, and is used in teas for its calming properties.</p>
+      </div>
+      <div class="wisdom-card">
+        <p class="wisdom-text">Orchid represents strength, luxury, and love, and is often associated with elegance, beauty, and refinement in different cultures.</p>
       </div>
     </div>
-  </div>
+    <div class="wisdom-dots">
+      <span class="wisdom-dot active" data-index="0"></span>
+      <span class="wisdom-dot" data-index="1"></span>
+      <span class="wisdom-dot" data-index="2"></span>
+      <span class="wisdom-dot" data-index="3"></span>
+    </div>
+  </section>
 
-  <!-- Original Footer -->
+  <!-- Reviews Section -->
+  <section id="reviews-section">
+    <h2>What People Say</h2>
+    <div class="reviews-container">
+      <div class="review">
+        <div class="reviewer">Sarah J.</div>
+        <div class="stars">★★★★★</div>
+        <p>"The digital bouquets are stunning! Sent one to my mom overseas and she loved it."</p>
+      </div>
+      <div class="review">
+        <div class="reviewer">Michael T.</div>
+        <div class="stars">★★★★☆</div>
+        <p>"Beautiful collection and easy to use. Would love to see more seasonal flowers added."</p>
+      </div>
+      <div class="review">
+        <div class="reviewer">Priya R.</div>
+        <div class="stars">★★★★★</div>
+        <p>"The cultural information about each flower makes this truly special. Learned so much!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>Designed by Chatura · Shaped with ChatGPT & DeepSeek</p>
-    <p>Bloom & Share - Connecting hearts through digital blooms</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Bloom & Share</h3>
+        <p>My love Imali, I may not have much to say, but this is a gift from my heart. When I can, I'll buy you a flower shop. You mean the world to me.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#about-section">About</a>
+        <a href="#flowerGrid">Flowers</a>
+        <a href="#wisdom-section">Wisdom</a>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/chaturadissanayake/" target="_blank" aria-label="Instagram">Instagram</a>
+          <a href="https://x.com/atakatus" target="_blank" aria-label="Twitter">Twitter</a>
+          <a href="www.linkedin.com/in/chaturadissanayake" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed by Chatura · Shaped with ChatGPT-4.5 & DeepSeek-V3.0324</p>
+    </div>
+    <button id="backToTopBtn" class="back-to-top">↑ Back to Top</button>
   </footer>
 
   <script src="script.js"></script>
