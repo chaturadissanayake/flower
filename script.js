@@ -466,3 +466,31 @@ function nextSlide() {
   showSlide(currentSlide + 1);
 }
 
+// Initialize everything
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile menu toggle
+  const menuToggle = document.createElement('button');
+  menuToggle.className = 'mobile-menu-toggle';
+  menuToggle.innerHTML = '☰';
+  document.querySelector('.sticky-header').appendChild(menuToggle);
+  
+  menuToggle.addEventListener('click', () => {
+    document.querySelector('.sticky-right').classList.toggle('show');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const isMenu = e.target.closest('.sticky-right');
+    const isToggle = e.target.closest('.mobile-menu-toggle');
+    
+    if (!isMenu && !isToggle && document.querySelector('.sticky-right.show')) {
+      document.querySelector('.sticky-right').classList.remove('show');
+    }
+  });
+
+  // Existing initialization code remains same
+  // ...
+});
+
+// EXISTING JS CODE REMAINS EXACTLY THE SAME
+// Only added mobile menu functionality above
