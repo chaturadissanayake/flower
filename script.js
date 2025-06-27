@@ -310,34 +310,56 @@ function setFlowerOfTheWeek() {
   document.getElementById("bloomNameTop").textContent = flower.name;
 }
 
-// Wisdom cards rotation
+// Enhanced Wisdom Carousel Function
 function rotateWisdom() {
-  const cards = document.querySelectorAll(".wisdom-card");
-  const dots = document.querySelectorAll(".wisdom-dot");
+  const cards = document.querySelectorAll('.wisdom-card');
+  const dots = document.querySelectorAll('.wisdom-dot');
   let currentIndex = 0;
-  
+  let rotationInterval;
+
   function showCard(index) {
-    cards.forEach(card => card.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+    // Remove active classes
+    cards.forEach(card => card.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
     
-    cards[index].classList.add("active");
-    dots[index].classList.add("active");
+    // Add active classes to current card/dot
+    cards[index].classList.add('active');
+    dots[index].classList.add('active');
     currentIndex = index;
   }
-  
-  // Add click events to dots
+
+  function startRotation() {
+    rotationInterval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % cards.length;
+      showCard(nextIndex);
+    }, 5000); // Rotate every 5 seconds
+  }
+
+  // Dot click handlers
   dots.forEach(dot => {
-    dot.addEventListener("click", () => {
+    dot.addEventListener('click', () => {
+      clearInterval(rotationInterval); // Pause auto-rotation
       showCard(parseInt(dot.dataset.index));
+      startRotation(); // Restart rotation
     });
   });
-  
-  // Auto-rotate every 5 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % cards.length;
-    showCard(currentIndex);
-  }, 5000);
+
+  // Initialize
+  showCard(0);
+  startRotation();
+
+  // Optional: Pause on hover
+  const carouselContainer = document.querySelector('.wisdom-cards');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(rotationInterval);
+    });
+    carouselContainer.addEventListener('mouseleave', startRotation);
+  }
 }
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', rotateWisdom);
 
 // Back to top button
 function setupBackToTop() {
