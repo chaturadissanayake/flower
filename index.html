@@ -1,185 +1,224 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bloom & Share - A Digital Garden</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
   
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#EC5EAB">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  
+  <meta name="theme-color" content="#FAF8F5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
 </head>
 <body>
 
   <div id="preloader">
     <div class="preloader-flower"></div>
-    <p>Planting the garden...</p>
   </div>
   
   <header class="sticky-header" id="stickyHeader">
-    <div class="sticky-left">
+    <div class="header-container">
       <a href="index.html" class="sticky-title">Bloom & Share</a>
-    </div>
-    <div class="sticky-right">
-      <nav>
-        <a href="#about-section">Our Story</a>
-        <a href="#pickFlowerTitle">Flowers</a>
-        <a href="#wisdom-section">Wisdom</a>
-        <a href="#reflections-section">Reflections</a>
-      </nav>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/chaturadissanayake/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0120.5 7.75v8.5a4.25 4.25 0 01-4.25-4.25h-8.5a4.25 4.25 0 01-4.25-4.25v-8.5A4.25 4.25 0 017.75 3.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm5.25-.88a.88.88 0 11-1.76 0 .88.88 0 011.76 0z"/></svg>
-        </a>
-        <a href="https://x.com/atakatus" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.22 4.22 0 001.85-2.33 8.36 8.36 0 01-2.66 1.02 4.18 4.18 0 00-7.13 3.81 11.87 11.87 0 01-8.61-4.37 4.18 4.18 0 001.29 5.58 4.16 4.16 0 01-1.89-.52v.05a4.18 4.18 0 003.35 4.1 4.18 4.18 0 01-1.88.07 4.19 4.19 0 003.91 2.91A8.38 8.38 0 012 19.54a11.81 11.81 0 006.29 1.84c7.55 0 11.69-6.26 11.69-11.69 0-.18 0-.35-.01-.53A8.36 8.36 0 0022.46 6z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/chaturadissanayake" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98s1.98-.88 1.98-1.98A1.98 1.98 0 004.98 3.5zM3.5 8.5h3v12h-3v-12zm5 0h2.89v1.64h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.55 1.97 3.55 4.54v7.36h-3v-6.52c0-1.56-.03-3.58-2.18-3.58-2.18 0-2.51 1.7-2.51 3.46v6.64h-3v-12z"/></svg>
-        </a>
+      <div class="sticky-right">
+        <nav>
+          <a href="#about-section">Our Story</a>
+          <a href="#flower-selection">The Garden</a>
+          <a href="#whispers-section">Wisdom</a>
+        </nav>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+      </button>
     </div>
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
   </header>
+
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <button class="close-mobile-nav" aria-label="Close menu"><i data-lucide="x"></i></button>
+    <nav>
+      <a href="#about-section" class="mobile-link">Our Story</a>
+      <a href="#flower-selection" class="mobile-link">The Garden</a>
+      <a href="#whispers-section" class="mobile-link">Wisdom</a>
+      <a href="#footer-section" class="mobile-link">Say Hello</a>
+    </nav>
+  </div>
 
   <main>
     <div class="slideshow-container">
       <div class="slideshow">
-        <img src="Assets/Slides/slide1.webp" class="slide active" alt="A serene garden path lined with blooming pink Azaleas">
-        <img src="Assets/Slides/slide2.webp" class="slide" alt="Vibrant bed of colorful flowers under soft sunlight">
-        <img src="Assets/Slides/slide3.webp" class="slide" alt="Close-up of delicate pink and white cherry blossoms">
+        <img src="Assets/Slides/slide1.webp" onerror="this.src='https://images.unsplash.com/photo-1490750967868-88cb44cb2722?q=80&w=2000&auto=format&fit=crop'" class="slide active" alt="Serene garden">
+        <img src="Assets/Slides/slide2.webp" onerror="this.src='https://images.unsplash.com/photo-1460500063983-994d4c27756c?q=80&w=2000&auto=format&fit=crop'" class="slide" alt="Vibrant flowers">
+        <img src="Assets/Slides/slide3.webp" onerror="this.src='https://images.unsplash.com/photo-1522748906645-95d8ebbfcced?q=80&w=2000&auto=format&fit=crop'" class="slide" alt="Cherry blossoms">
       </div>
-      <div class="dots"></div>
+      <div class="slideshow-overlay"></div>
+      
+      <div class="hero-content" data-anim="fade-in-up">
+        <h1 class="hero-title">The Language of Petals</h1>
+        <p class="hero-subtext">In this quiet sanctuary, every bloom holds a voice. Select a flower, write your thoughtful message, and let its story speak for you.</p>
+        
+        <div class="hero-actions">
+           <button id="heroActionBtn" class="btn-primary hero-btn">Send a Digital Flower</button>
+        </div>
+      </div>
     </div>
-
-    <section class="hero-wrapper" data-anim="fade-in-up">
-      <h1 class="hero-title">The Language of Petals</h1>
-      <p class="hero-subtext">Here, in this quiet garden, every bloom holds a story. Choose one, gift its meaning, and let a flower speak for you.</p>
-      <p class="hero-feature">Today's Bloom: <span id="bloomNameTop" class="flower-name-big">Tuberose</span></p>
+  
+    <section id="about-section" class="section-padding fade-up-element">
+      <div class="container editorial-layout content-wrapper text-center">
+        <h2>A bridge built of petals and pixels.</h2>
+        <div id="aboutText" class="readable-text">
+            <p class="lead-text">Inspired by the quiet grace of Sri Lankan flora, this digital garden is an antidote to the distances that separate us.</p>
+            <p>We created this space for you to pause. To sift through delicate blooms, find the one that perfectly mirrors your emotions, and send its digital echo to someone you hold dear. It is a modern vessel for a timeless gesture, sharing a piece of your heart without saying a single word out loud.</p>
+            <div class="extra-about-wrapper" id="extraAbout">
+                <p>We believe in quiet moments. Our design is intentionally simple, a canvas of soft light and thoughtful words, allowing the flowers themselves to be the focus. This is more than a website; it is a bridge built of petals and pixels, a new way to share a timeless gesture of love.</p>
+            </div>
+        </div>
+        <button id="readMoreBtn" class="btn-text-only">
+            <span>Read the full story</span>
+        </button>
+      </div>
     </section>
   
-    <section id="about-section" data-anim="fade-in-up">
-      <h2>Our Garden's Story</h2>
-      <div id="aboutText">
-        <p>Inspired by the quiet grace of Sri Lankan flora, this garden was created as a gentle reply to the distances that separate us. It is a space to pause, to find a flower that mirrors your feelings, and to send its digital echo to someone you hold dear.</p>
-        <div class="extra-about hidden">
-          <p>We believe in quiet moments. Our design is intentionally simple—a canvas of soft light and thoughtful words, allowing the flowers themselves to be the focus. This is more than a website; it is a bridge built from pixels and petals, a modern way to share a timeless gesture of love.</p>
+    <section id="flower-selection" class="section-padding background-linen" data-anim="fade-in-up">
+      <div class="container">
+        <h2 id="pickFlowerTitle" class="text-center">Choose Your Bloom</h2>
+        
+        <p class="feature-explanation text-center">Select a flower, craft a thoughtful note, and download a digital postcard to share with someone special.</p>
+        
+        <div class="search-filter-container content-wrapper">
+          <div class="search-container">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Find a bloom by name or feeling..." aria-label="Search flowers">
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Blooms</button>
+            <button class="filter-btn" data-filter="love">Love</button>
+            <button class="filter-btn" data-filter="peace">Peace</button>
+            <button class="filter-btn" data-filter="joy">Joy</button>
+            <button class="filter-btn" data-filter="strength">Strength</button>
+          </div>
         </div>
-      </div>
-      <button id="readMoreBtn" class="read-more">View More</button>
-    </section>
-  
-    <section class="container" data-anim="fade-in-up">
-      <h2 id="pickFlowerTitle">Choose Your Bloom</h2>
-      <div class="search-filter-container">
-        <div class="search-container">
-          <input type="text" id="searchInput" placeholder="Search flowers by name..." aria-label="Search flowers">
-          <button id="searchButton" aria-label="Search">Search</button>
+        
+        <div class="grid-container">
+            <div id="flowerGrid" class="flower-grid"></div>
         </div>
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="love">Love</button>
-          <button class="filter-btn" data-filter="peace">Peace</button>
-          <button class="filter-btn" data-filter="joy">Joy</button>
-          <button class="filter-btn" data-filter="strength">Strength</button>
-          <button class="filter-btn" data-filter="native">Native</button>
+        
+        <div id="noResultsMessage" class="no-results-message" style="display: none;">
+          <i data-lucide="leaf" style="margin-bottom: 15px; color: var(--accent); width: 30px; height: 30px;"></i>
+          <p>The garden rests. No blooms matched your feeling.</p>
         </div>
-      </div>
-      
-      <div class="loading-container" id="loadingContainer">
-        <div class="loading-spinner"></div>
-        <p>Tending to the flowers...</p>
-      </div>
-      
-      <div id="flowerGrid" class="flower-grid"></div>
-      <div id="noResultsMessage" class="no-results-message" style="display: none;">
-        No flowers found matching your search. Please try different keywords.
       </div>
     </section>
 
-    <section id="wisdom-section" data-anim="fade-in-up">
-      <h2>Flower Wisdom</h2>
-      <div class="wisdom-cards"></div>
-      <div class="wisdom-dots"></div>
+    <section id="whispers-section" class="section-padding background-creamy" data-anim="fade-in-up">
+      <div class="container content-wrapper text-center">
+        <h2>Whispers of the Garden</h2>
+        <div class="wisdom-cards" id="wisdomTrack"></div>
+        <div class="carousel-dots" id="wisdomDots"></div>
+      </div>
     </section>
 
-    <section id="reflections-section" data-anim="fade-in-up">
-      <h2>A Moment in the Garden</h2>
-      <div class="reflections-container"></div>
-      <div class="reflections-dots"></div>
-    </section>
   </main>
 
-  <footer>
+  <footer id="footer-section">
     <div class="footer-content">
-      <div class="footer-section">
+      <div class="footer-brand">
         <h3>For Imali, With Love</h3>
-        <p>My love, Imali, I may not have much to say, but this is a gift from my heart. When I can, I'll buy you a flower shop. You mean the world to me.</p>
+        <p class="footer-love-note">A digital garden cultivated from quiet thoughts and unspoken words.<br>I hope these digital blooms carry the weight of my love.<br>You mean the world to me.</p>
       </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <a href="#about-section">Our Story</a>
-        <a href="#pickFlowerTitle">Flowers</a>
-        <a href="#wisdom-section">Wisdom</a>
-        <a href="#reflections-section">Reflections</a>
-      </div>
-      <div class="footer-section">
-        <h3>Connect</h3>
-        <a href="https://www.instagram.com/chaturadissanayake/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://x.com/atakatus" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="https://www.linkedin.com/in/chaturadissanayake" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="footer-links-container">
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <a href="#about-section">Our Story</a>
+          <a href="#flower-selection">The Garden</a>
+          <a href="#whispers-section">Wisdom</a>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <a href="https://www.instagram.com/chaturadissanayake/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://x.com/atakatus" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+          <a href="https://www.linkedin.com/in/chaturadissanayake" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>Designed by Chatura · Shaped with AI Assistants</p>
+      <p>All rights reserved &copy; 2026 Chatura Dissanayake</p>
     </div>
   </footer>
 
-  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">↑</button>
-  <button id="audioToggle" class="audio-toggle" aria-label="Toggle music">▶</button>
+  <div class="floating-controls">
+      <button id="audioToggle" class="utility-btn audio-toggle" aria-label="Toggle music">
+        <i data-lucide="music" class="icon-play"></i>
+        <i data-lucide="pause" class="icon-pause" style="display:none;"></i>
+      </button>
+      
+      <button id="backToTopBtn" class="utility-btn back-to-top hidden" aria-label="Back to top">
+          <i data-lucide="arrow-up"></i>
+      </button>
+  </div>
   
-  <div id="youtubePlayer" style="display: none;"></div>
+  <audio id="bgMusic" loop preload="auto">
+      <source src="Assets/Audio/your-music-file.mp3" type="audio/mpeg">
+  </audio>
   
-  <div id="createPopup" class="popup">
-    <div class="popup-content">
-      <button class="close-btn" aria-label="Close">×</button>
-      <img id="createFlowerImage" src="" alt="Selected Flower" class="popup-flower-img">
-      <h3 id="createFlowerName"></h3>
-      <p id="createFlowerDescription" class="popup-description"></p>
-      <form class="share-form" onsubmit="return false;">
-        <input type="text" id="shareTo" placeholder="Recipient's Name (e.g., Imali)">
-        <textarea id="shareMessage" placeholder="Your personal message..." rows="3"></textarea>
-        <input type="text" id="shareFrom" placeholder="Your Name (e.g., Chatura)">
-        <button type="button" id="createShareLinkBtn" class="share-btn">Create & Share</button>
-      </form>
+  <div id="createPopup" class="modal-overlay">
+    <div class="modal-wrapper">
+      
+      <button class="modal-close" aria-label="Close"><i data-lucide="x"></i></button>
+      
+      <div id="postcardElement" class="postcard-container paper-texture">
+        
+        <div class="postcard-art background-creamy">
+          <div class="pc-image-frame">
+              <img id="pcImage" src="" alt="Flower" draggable="false" oncontextmenu="return false;">
+          </div>
+          <div class="pc-botanical-info">
+             <h3 id="pcName" class="pc-flower-name">Flower Name</h3>
+             <p id="pcDesc" class="pc-flower-desc">Flower description goes here.</p>
+          </div>
+        </div>
+        
+        <div class="postcard-message">
+          <div class="pc-editor">
+             <input type="text" id="pcTo" placeholder="Dear Name," class="pc-input-title" autocomplete="off">
+             
+             <textarea id="pcMsg" placeholder="Write your thoughtful note here..." class="pc-input-body"></textarea>
+             
+             <div class="pc-signature">
+                <span>With care,</span>
+                <input type="text" id="pcFrom" placeholder="Your Name" class="pc-input-sig" autocomplete="off">
+             </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="studio-actions">
+        <label class="checkbox-label" title="Send as 'Someone who cares'">
+            <input type="checkbox" id="anonCheck">
+            <span class="custom-checkbox"></span>
+            Send anonymously
+        </label>
+        
+        <div class="action-buttons">
+            <button id="downloadBtn" class="btn-primary" title="Download Image">
+                <i data-lucide="download"></i> Download Postcard
+            </button>
+            <button id="copyLinkBtn" class="btn-outline" title="Copy Text">
+                <i data-lucide="link"></i> Copy Text
+            </button>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div id="shareViewPopup" class="popup">
-    <div class="popup-content share-view-content">
-       <button class="close-btn" aria-label="Close">×</button>
-       <p class="share-view-recipient">For <span id="shareViewTo"></span>,</p>
-       <img id="shareViewImage" src="" alt="Shared Flower" class="popup-flower-img">
-       <h3 id="shareViewFlowerName"></h3>
-       <p id="shareViewMessage"></p>
-       <p class="share-view-sender">With love from, <span id="shareViewFrom"></span></p>
-       <div class="share-options">
-         <p>Share this moment:</p>
-         <div class="share-buttons-container"></div>
-       </div>
-       <button id="createNewBtn" class="share-btn-secondary">Create Your Own</button>
-    </div>
-  </div>
-
-  <noscript>
-    <p style="text-align: center; padding: 20px; background: #fff3cd; color: #856404;">
-      This website requires JavaScript to function properly. Please enable it in your browser settings.
-    </p>
-  </noscript>
-  <script src="app.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
