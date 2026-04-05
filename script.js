@@ -12,7 +12,7 @@ const flowers = [
   { name: "Cinnamon Flower", imgSrc: "Assets/Flowers/JPEG/10_CinnamonFlower.jpg", description: "A rare, spicy-sweet scent that evokes warmth and comfort.", tags: ["rare", "native", "joy"] },
   { name: "Ixora", imgSrc: "Assets/Flowers/JPEG/11_Ixora.jpg", description: "Fiery clusters that burn with devotion and passionate admiration.", tags: ["symbolism", "native", "love", "strength"] },
   { name: "Periwinkle", imgSrc: "Assets/Flowers/JPEG/12_Periwinkle.jpg", description: "A quiet blessing for good fortune and enduring friendship.", tags: ["symbolism", "peace"] },
-  { name: "Plumeria (White)", imgSrc: "Assets/Flowers/JPEG/13_Plumeria.jpg", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
+  { name: "Plumeria (White)", imgSrc: "Assets/Flowers/JPEG/13_Primrose.jpg", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
   { name: "Karthigaipoo", imgSrc: "Assets/Flowers/JPEG/14_Karthigaipoo.jpg", description: "A sacred flame of glory, representing divine blessings.", tags: ["symbolism", "native", "strength"] },
   { name: "Poinsettia", imgSrc: "Assets/Flowers/JPEG/15_Poinsettia.jpg", description: "The cheerful star of winter, a sign of celebration and good cheer.", tags: ["symbolism", "joy"] },
   { name: "Wild Ginger", imgSrc: "Assets/Flowers/JPEG/16_WildGinger.jpg", description: "An exotic treasure hidden beneath lush, tropical leaves.", tags: ["rare", "native"] },
