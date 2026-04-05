@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
   
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
@@ -19,10 +19,6 @@
 </head>
 <body>
 
-  <div id="preloader">
-    <div class="preloader-flower"></div>
-  </div>
-  
   <header class="sticky-header" id="stickyHeader">
     <div class="header-container">
       <a href="index.html" class="sticky-title">Bloom & Share</a>
@@ -52,9 +48,9 @@
   <main>
     <div class="slideshow-container">
       <div class="slideshow">
-        <img src="Assets/Slides/slide1.webp" onerror="this.src='https://images.unsplash.com/photo-1490750967868-88cb44cb2722?q=80&w=2000&auto=format&fit=crop'" class="slide active" alt="Serene garden">
-        <img src="Assets/Slides/slide2.webp" onerror="this.src='https://images.unsplash.com/photo-1460500063983-994d4c27756c?q=80&w=2000&auto=format&fit=crop'" class="slide" alt="Vibrant flowers">
-        <img src="Assets/Slides/slide3.webp" onerror="this.src='https://images.unsplash.com/photo-1522748906645-95d8ebbfcced?q=80&w=2000&auto=format&fit=crop'" class="slide" alt="Cherry blossoms">
+        <img src="Assets/Slides/slide1.webp" crossorigin="anonymous" class="slide active" alt="Serene garden">
+        <img src="Assets/Slides/slide2.webp" crossorigin="anonymous" class="slide" alt="Vibrant flowers">
+        <img src="Assets/Slides/slide3.webp" crossorigin="anonymous" class="slide" alt="Cherry blossoms">
       </div>
       <div class="slideshow-overlay"></div>
       
@@ -176,7 +172,7 @@
         
         <div class="postcard-art background-creamy">
           <div class="pc-image-frame">
-              <img id="pcImage" src="" alt="Flower" draggable="false" oncontextmenu="return false;">
+              <img id="pcImage" src="" alt="Flower" draggable="false" oncontextmenu="return false;" crossorigin="anonymous">
           </div>
           <div class="pc-botanical-info">
              <h3 id="pcName" class="pc-flower-name">Flower Name</h3>
@@ -219,6 +215,6 @@
     </div>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
