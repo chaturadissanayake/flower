@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Say Hello - Ily's Garden</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE0JM0QT56"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CE0JM0QT56');
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <header class="sticky-header scrolled" id="stickyHeader">
+    <div class="header-container">
+      <a href="index.html" class="sticky-title">Ily's Garden</a>
+      <div class="sticky-right">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Story</a>
+          <a href="index.html#flower-selection">The Garden</a>
+        </nav>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <button class="close-mobile-nav" aria-label="Close menu"><i data-lucide="x"></i></button>
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">Our Story</a>
+      <a href="index.html#flower-selection" class="mobile-link">The Garden</a>
+    </nav>
+  </div>
+
+  <main class="subpage-main fade-up-element visible">
+      <h1>Say Hello</h1>
+      <p class="lead-text" style="margin-bottom: 40px;">Whether you want to suggest a new bloom or simply share a quiet thought, we would love to hear from you.</p>
+      
+      <form style="display: flex; flex-direction: column; gap: 20px; width: 100%; text-align: left;">
+          <div>
+              <label style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-main);">Your Name</label>
+              <input type="text" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); background: transparent; border-radius: 2px; margin-top: 5px; outline: none;">
+          </div>
+          <div>
+              <label style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-main);">Your Note</label>
+              <textarea rows="5" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); background: transparent; border-radius: 2px; margin-top: 5px; outline: none; resize: vertical; font-family: var(--font-sans);"></textarea>
+          </div>
+          <button type="button" class="btn-primary" style="margin-top: 10px;">Send Message</button>
+      </form>
+  </main>
+
+  <footer id="footer-section">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>For Imali, With Love</h3>
+        <p class="footer-love-note">A digital garden cultivated from quiet thoughts and unspoken words.<br>I hope these digital blooms carry the weight of my love.<br>You mean the world to me.</p>
+      </div>
+      <div class="footer-links-container">
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <a href="about.html">Our Story</a>
+          <a href="index.html#flower-selection">The Garden</a>
+          <a href="index.html#whispers-section">Wisdom</a>
+        </div>
+        <div class="footer-section">
+          <h3>Legal & Connect</h3>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>All rights reserved &copy; 2026 Chatura Dissanayake</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Bloom & Share",
+  "short_name": "Bloom",
+  "description": "A digital garden cultivated from quiet thoughts and unspoken words.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FDFBF7",
+  "theme_color": "#3A473D",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
