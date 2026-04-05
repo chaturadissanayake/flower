@@ -1,26 +1,26 @@
 // ===== DATA =====
 const flowers = [
-  { name: "Jasmine", imgSrc: "Assets/Flowers/JPEG/1_Jasmine.webp", description: "The scent of a quiet dawn, a whisper of purity and grace.", tags: ["fragrant", "symbolism", "love", "peace"] },
-  { name: "Lotus", imgSrc: "Assets/Flowers/JPEG/2_Lotus.webp", description: "Rising from water to meet the sun, a symbol of the soul's journey.", tags: ["symbolism", "native", "peace", "strength"] },
-  { name: "Hibiscus", imgSrc: "Assets/Flowers/JPEG/3_Hibiscus.webp", description: "A fleeting, vibrant bloom that speaks of passionate, delicate beauty.", tags: ["symbolism", "love", "joy"] },
-  { name: "Bougainvillea", imgSrc: "Assets/Flowers/JPEG/4_Bougainvillea.webp", description: "A resilient cascade of color, finding joy in the harshest sun.", tags: ["native", "joy", "strength"] },
-  { name: "Plumeria (Araliya)", imgSrc: "Assets/Flowers/JPEG/5_Plumeria.webp", description: "Soft petals holding the fragrance of a tropical evening.", tags: ["fragrant", "love", "peace"] },
-  { name: "Water Lily (Nil Mahanel)", imgSrc: "Assets/Flowers/JPEG/6_WaterLily.webp", description: "A star floating on a still pond, representing peace and purity.", tags: ["symbolism", "native", "peace"] },
-  { name: "Coconut Flower", imgSrc: "Assets/Flowers/JPEG/7_CoconutFlower.webp", description: "The humble heart of the giving tree, a promise of life.", tags: ["native", "strength"] },
-  { name: "Orchid", imgSrc: "Assets/Flowers/JPEG/8_Orchid.webp", description: "An elegant and mysterious bloom of rare, silent beauty.", tags: ["rare", "love"] },
-  { name: "Balsam", imgSrc: "Assets/Flowers/JPEG/9_Balsam.webp", description: "A delicate touch of kindness, adding subtle love to any garden.", tags: ["native", "love"] },
-  { name: "Cinnamon Flower", imgSrc: "Assets/Flowers/JPEG/10_CinnamonFlower.webp", description: "A rare, spicy-sweet scent that evokes warmth and comfort.", tags: ["rare", "native", "joy"] },
-  { name: "Ixora", imgSrc: "Assets/Flowers/JPEG/11_Ixora.webp", description: "Fiery clusters that burn with devotion and passionate admiration.", tags: ["symbolism", "native", "love", "strength"] },
-  { name: "Periwinkle", imgSrc: "Assets/Flowers/JPEG/12_Periwinkle.webp", description: "A quiet blessing for good fortune and enduring friendship.", tags: ["symbolism", "peace"] },
-  { name: "Plumeria (White)", imgSrc: "Assets/Flowers/JPEG/13_Plumeria.webp", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
-  { name: "Karthigaipoo", imgSrc: "Assets/Flowers/JPEG/14_Karthigaipoo.webp", description: "A sacred flame of glory, representing divine blessings.", tags: ["symbolism", "native", "strength"] },
-  { name: "Poinsettia", imgSrc: "Assets/Flowers/JPEG/15_Poinsettia.webp", description: "The cheerful star of winter, a sign of celebration and good cheer.", tags: ["symbolism", "joy"] },
-  { name: "Wild Ginger", imgSrc: "Assets/Flowers/JPEG/16_WildGinger.webp", description: "An exotic treasure hidden beneath lush, tropical leaves.", tags: ["rare", "native"] },
-  { name: "Sunflower", imgSrc: "Assets/Flowers/JPEG/17_Sunflower.webp", description: "A bright, joyful face that forever follows the light.", tags: ["symbolism", "joy", "strength"] },
-  { name: "Tuberose", imgSrc: "Assets/Flowers/JPEG/18_Tuberose.webp", description: "An intoxicating scent of dangerous pleasure and sensual beauty.", tags: ["fragrant", "rare", "love"] },
-  { name: "Lantana", imgSrc: "Assets/Flowers/JPEG/19_Lantana.webp", description: "Clusters of ever-changing color, a dance of transformation.", tags: ["native", "joy"] },
-  { name: "Golden Shower", imgSrc: "Assets/Flowers/JPEG/20_GoldenShower.webp", description: "A cascade of gold, symbolizing abundance and the joy of spring.", tags: ["symbolism", "native", "joy"] },
-  { name: "Moringa Flowers", imgSrc: "Assets/Flowers/JPEG/21_MoringaFlowers.webp", description: "Delicate blossoms from the 'miracle tree,' a gift of healing.", tags: ["native", "symbolism", "strength", "peace"] }
+  { name: "Jasmine", imgSrc: "Assets/Flowers/1_Jasmine.webp", description: "The scent of a quiet dawn, a whisper of purity and grace.", tags: ["fragrant", "symbolism", "love", "peace"] },
+  { name: "Lotus", imgSrc: "Assets/Flowers/2_Lotus.webp", description: "Rising from water to meet the sun, a symbol of the soul's journey.", tags: ["symbolism", "native", "peace", "strength"] },
+  { name: "Hibiscus", imgSrc: "Assets/Flowers/3_Hibiscus.webp", description: "A fleeting, vibrant bloom that speaks of passionate, delicate beauty.", tags: ["symbolism", "love", "joy"] },
+  { name: "Bougainvillea", imgSrc: "Assets/Flowers/4_Bougainvillea.webp", description: "A resilient cascade of color, finding joy in the harshest sun.", tags: ["native", "joy", "strength"] },
+  { name: "Plumeria (Araliya)", imgSrc: "Assets/Flowers/5_Plumeria.webp", description: "Soft petals holding the fragrance of a tropical evening.", tags: ["fragrant", "love", "peace"] },
+  { name: "Water Lily (Nil Mahanel)", imgSrc: "Assets/Flowers/6_WaterLily.webp", description: "A star floating on a still pond, representing peace and purity.", tags: ["symbolism", "native", "peace"] },
+  { name: "Coconut Flower", imgSrc: "Assets/Flowers/7_CoconutFlower.webp", description: "The humble heart of the giving tree, a promise of life.", tags: ["native", "strength"] },
+  { name: "Orchid", imgSrc: "Assets/Flowers/8_Orchid.webp", description: "An elegant and mysterious bloom of rare, silent beauty.", tags: ["rare", "love"] },
+  { name: "Balsam", imgSrc: "Assets/Flowers/9_Balsam.webp", description: "A delicate touch of kindness, adding subtle love to any garden.", tags: ["native", "love"] },
+  { name: "Cinnamon Flower", imgSrc: "Assets/Flowers/10_CinnamonFlower.webp", description: "A rare, spicy-sweet scent that evokes warmth and comfort.", tags: ["rare", "native", "joy"] },
+  { name: "Ixora", imgSrc: "Assets/Flowers/11_Ixora.webp", description: "Fiery clusters that burn with devotion and passionate admiration.", tags: ["symbolism", "native", "love", "strength"] },
+  { name: "Periwinkle", imgSrc: "Assets/Flowers/12_Periwinkle.webp", description: "A quiet blessing for good fortune and enduring friendship.", tags: ["symbolism", "peace"] },
+  { name: "Plumeria (White)", imgSrc: "Assets/Flowers/13_Plumeria.webp", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
+  { name: "Karthigaipoo", imgSrc: "Assets/Flowers/14_Karthigaipoo.webp", description: "A sacred flame of glory, representing divine blessings.", tags: ["symbolism", "native", "strength"] },
+  { name: "Poinsettia", imgSrc: "Assets/Flowers/15_Poinsettia.webp", description: "The cheerful star of winter, a sign of celebration and good cheer.", tags: ["symbolism", "joy"] },
+  { name: "Wild Ginger", imgSrc: "Assets/Flowers/16_WildGinger.webp", description: "An exotic treasure hidden beneath lush, tropical leaves.", tags: ["rare", "native"] },
+  { name: "Sunflower", imgSrc: "Assets/Flowers/17_Sunflower.webp", description: "A bright, joyful face that forever follows the light.", tags: ["symbolism", "joy", "strength"] },
+  { name: "Tuberose", imgSrc: "Assets/Flowers/18_Tuberose.webp", description: "An intoxicating scent of dangerous pleasure and sensual beauty.", tags: ["fragrant", "rare", "love"] },
+  { name: "Lantana", imgSrc: "Assets/Flowers/19_Lantana.webp", description: "Clusters of ever-changing color, a dance of transformation.", tags: ["native", "joy"] },
+  { name: "Golden Shower", imgSrc: "Assets/Flowers/20_GoldenShower.webp", description: "A cascade of gold, symbolizing abundance and the joy of spring.", tags: ["symbolism", "native", "joy"] },
+  { name: "Moringa Flowers", imgSrc: "Assets/Flowers/21_MoringaFlowers.webp", description: "Delicate blossoms from the 'miracle tree,' a gift of healing.", tags: ["native", "symbolism", "strength", "peace"] }
 ];
 
 const whispers = [
@@ -32,10 +32,8 @@ const whispers = [
   { text: "Where flowers bloom, so does hope.", author: "Lady Bird Johnson" }
 ];
 
-// ===== INITIALIZATION & CORE LOGIC =====
 document.addEventListener("DOMContentLoaded", () => {
     lucide.createIcons();
-    setupPreloader();
     setupHeaderBehavior();
     setupMobileMenu(); 
     setupScrollAnimations();
@@ -49,15 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupAudioSystem();
     setupInteractiveSharePopup(); 
 });
-
-function setupPreloader() {
-    const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        preloader.classList.add('hidden');
-        setTimeout(() => preloader.style.display = 'none', 600);
-    });
-    setTimeout(() => preloader.classList.add('hidden'), 3000); 
-}
 
 function setupHeaderBehavior() {
     const header = document.getElementById("stickyHeader");
@@ -174,12 +163,11 @@ function setupFlowerGrid() {
         item.className = "flower-item fade-up-element"; 
         item.dataset.tags = flower.tags.join(" ").toLowerCase();
         item.dataset.index = index;
-        
         item.style.transitionDelay = `${(index % 4) * 0.1}s`;
         
         item.innerHTML = `
             <div class="flower-img-container">
-                <img src="${flower.imgSrc}" alt="${flower.name}" draggable="false" oncontextmenu="return false;" onerror="this.src='https://images.unsplash.com/photo-1490750967868-88cb44cb2722?q=80&w=400&auto=format&fit=crop'">
+                <img src="${flower.imgSrc}" alt="${flower.name}" crossorigin="anonymous" draggable="false" oncontextmenu="return false;">
             </div>
             <div class="flower-item-content">
                 <h3 class="flower-name">${flower.name}</h3>
@@ -297,40 +285,46 @@ function setupAudioSystem() {
     let isPlaying = false;
     let hasInteracted = false;
 
-    // Toggle Play/Pause on button click
     const togglePlay = () => {
         if (isPlaying) {
             bgMusic.pause();
             playIcon.style.display = 'block';
             pauseIcon.style.display = 'none';
         } else {
-            bgMusic.play().then(() => {
-                playIcon.style.display = 'none';
-                pauseIcon.style.display = 'block';
-            }).catch(e => console.log("Audio play blocked by browser. Make sure source URL is valid."));
+            let playPromise = bgMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                }).catch(e => {
+                    console.log("Audio file missing or browser blocked playback.");
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                });
+            }
         }
         isPlaying = !isPlaying;
     };
 
     btn.addEventListener('click', togglePlay);
 
-    // Modern browsers require a user interaction before allowing audio to auto-play.
-    // This listens for the very first click anywhere on the document to start the music.
     document.body.addEventListener('click', () => {
         if (!hasInteracted && !isPlaying && bgMusic.src && bgMusic.src !== window.location.href) {
             hasInteracted = true;
-            bgMusic.play().then(() => {
-                isPlaying = true;
-                playIcon.style.display = 'none';
-                pauseIcon.style.display = 'block';
-            }).catch(e => {
-                console.log("Autoplay prevented or source not yet set.");
-            });
+            let autoPlayPromise = bgMusic.play();
+            if (autoPlayPromise !== undefined) {
+                autoPlayPromise.then(() => {
+                    isPlaying = true;
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                }).catch(e => {
+                    console.log("Autoplay prevented or source not yet set.");
+                });
+            }
         }
     }, { once: true });
 }
 
-// ===== WYSIWYG POSTCARD MODAL LOGIC =====
 let currentSelectedFlower = null;
 
 function setupInteractiveSharePopup() {
@@ -353,12 +347,9 @@ function setupInteractiveSharePopup() {
     closeBtn.addEventListener("click", closePopup);
     popup.addEventListener("click", (e) => { if(e.target === popup) closePopup(); });
     
-    // Auto-shrink textarea text instead of expanding height
     msgInput.addEventListener('input', function() {
-        let currentSize = 1.6; // Starting base font size in rem
+        let currentSize = 1.6; 
         this.style.fontSize = currentSize + 'rem';
-        
-        // If content overflows the fixed height, shrink the font down to fit
         while (this.scrollHeight > this.clientHeight && currentSize > 0.9) {
             currentSize -= 0.1;
             this.style.fontSize = currentSize + 'rem';
@@ -414,16 +405,19 @@ function setupInteractiveSharePopup() {
         if(!msgInput.value) msgInput.placeholder = "";
 
         const fromName = anonCheck.checked ? "Anon" : (fromInput.value || "Care");
-        const fileName = `${currentSelectedFlower.name.replace(/\s+/g, '_')}_Postcard_From_${fromName.replace(/\s+/g, '_')}.png`;
+        const fileName = `${currentSelectedFlower.name.replace(/\s+/g, '_')}_Postcard.png`;
 
+        const currentScroll = window.scrollY;
+        
         html2canvas(document.getElementById("postcardElement"), {
             scale: 2, 
             useCORS: true, 
-            allowTaint: true, 
             logging: false,
-            backgroundColor: "#FFFFFF" 
+            backgroundColor: "#FFFFFF",
+            scrollX: 0,
+            scrollY: -window.scrollY
         }).then(canvas => {
-            msgInput.placeholder = originalPlaceholder; // restore
+            msgInput.placeholder = originalPlaceholder; 
             const link = document.createElement('a');
             link.download = fileName;
             link.href = canvas.toDataURL('image/png', 1.0);
@@ -431,9 +425,9 @@ function setupInteractiveSharePopup() {
             downloadBtn.innerHTML = originalText;
             lucide.createIcons();
         }).catch(err => {
-            msgInput.placeholder = originalPlaceholder; // restore
+            msgInput.placeholder = originalPlaceholder; 
             console.error("Could not generate postcard", err);
-            alert("Sorry, there was an issue generating your postcard. Security constraints can prevent local files from being drawn. This feature works perfectly when hosted online.");
+            alert("Security block: GitHub Pages requires images to exist in your repository to download them. Ensure your 'Assets' folder is uploaded correctly.");
             downloadBtn.innerHTML = originalText;
             lucide.createIcons();
         });
@@ -444,11 +438,10 @@ function openInteractivePopup(index) {
     currentSelectedFlower = flowers[index];
     const popup = document.getElementById("createPopup");
     
-    // Reset Form
     document.getElementById("pcTo").value = "";
     const msgInput = document.getElementById("pcMsg");
     msgInput.value = "";
-    msgInput.style.fontSize = '1.6rem'; // reset font size
+    msgInput.style.fontSize = '1.6rem'; 
     
     document.getElementById("pcFrom").value = "";
     document.getElementById("anonCheck").checked = false; 
@@ -457,7 +450,6 @@ function openInteractivePopup(index) {
     
     const img = document.getElementById("pcImage");
     img.src = currentSelectedFlower.imgSrc;
-    img.onerror = () => { img.src = 'https://images.unsplash.com/photo-1490750967868-88cb44cb2722?q=80&w=400&auto=format&fit=crop'; }; 
     
     document.getElementById("pcName").textContent = currentSelectedFlower.name;
     document.getElementById("pcDesc").textContent = currentSelectedFlower.description;
