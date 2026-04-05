@@ -77,12 +77,6 @@ h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1.5rem; }
 
 i[data-lucide] { width: 18px; height: 18px; }
 
-/* Preloader */
-#preloader { position: fixed; inset: 0; background: var(--bg-base); display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.6s ease; }
-#preloader.hidden { opacity: 0; pointer-events: none; }
-.preloader-flower { width: 40px; height: 40px; border: 2px solid var(--border-color); border-top-color: var(--accent); border-radius: 50%; animation: spin 1s infinite cubic-bezier(0.4, 0, 0.2, 1); }
-@keyframes spin { to { transform: rotate(360deg); } }
-
 /* Header */
 .sticky-header {
   position: fixed; top: 0; width: 100%; height: 80px;
@@ -374,18 +368,17 @@ footer { background: var(--text-main); color: var(--bg-creamy); padding-top: 60p
 
 /* ===== RESPONSIVE OVERHAUL ===== */
 @media (max-width: 992px) {
-  /* Fixing the disappearing Action Buttons Issue */
   .modal-wrapper { 
       max-height: 90vh; 
       display: flex; 
       flex-direction: column; 
-      overflow-y: auto; /* Let the wrapper scroll, not the inner container */
+      overflow-y: auto; 
       overflow-x: hidden;
       padding-bottom: 20px;
   }
   .postcard-container { 
       flex-direction: column; 
-      overflow-y: visible; /* Disabled inner scroll */
+      overflow-y: visible; 
       height: auto; 
       max-height: none; 
   }
@@ -429,7 +422,6 @@ footer { background: var(--text-main); color: var(--bg-creamy); padding-top: 60p
   }
   .filter-buttons::-webkit-scrollbar { display: none; }
   
-  /* SINGLE COLUMN MOBILE GRID (As requested) */
   .flower-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -443,7 +435,6 @@ footer { background: var(--text-main); color: var(--bg-creamy); padding-top: 60p
   .flower-name { font-size: 1.6rem; }
   .flower-desc { font-size: 0.95rem; line-height: 1.5; }
   
-  /* Condensed Footer specifically for mobile */
   footer { padding-top: 40px; }
   .footer-content { padding-bottom: 20px; gap: 25px; }
   .footer-links-container { grid-template-columns: 1fr; gap: 20px; }
