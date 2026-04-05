@@ -1,86 +1,35 @@
-# Bloom & Share - Digital Flower Garden
+# Bloom and Share Digital Garden
 
-![Bloom & Share Banner](Assets/banner.jpg)
-
-A digital garden where every flower carries meaning and can be shared with loved ones.
+Bloom and Share is a digital gifting experience that allows users to explore a garden of flora, select a bloom, and craft a personalised digital postcard to share. The site acts as a bridge built of petals and pixels for sharing thoughts.
 
 ## Features
 
-- **Interactive Flower Gallery**: Browse 21 beautifully curated flowers with cultural significance
-- **Wisdom Carousel**: Discover rotating flower facts and meanings
-- **Personal Messages**: Create and share digital floral gifts
-- **Responsive Design**: Works perfectly on all devices
-- **Animated Transitions**: Smooth animations throughout the experience
+* Flower selection grid with search and category filters for love, peace, joy, and strength.
+* Postcard studio for writing custom messages that automatically scale to fit the frame.
+* Postcard generation and download using HTML2Canvas.
+* Integrated background audio with play and pause controls.
+* Fully responsive design optimised for both desktop and mobile layouts.
 
-## Technologies Used
+## File Structure
 
-- HTML5
-- CSS3 (Flexbox, Grid, custom properties)
-- JavaScript (ES6)
-- [Google Fonts](https://fonts.google.com/) (Playfair Display, Inter)
+* index.html: Main structure and postcard creation modal.
+* styles.css: Core design system and responsive styling.
+* script.js: Application logic, data handling, and postcard generation.
+* Assets/Flowers/JPEG/: Directory for botanical images.
+* Assets/Slides/: Directory for hero background images.
+* Assets/Audio/: Directory for the background music file.
 
-## Installation
+## Setup and Usage
 
-No installation required - simply open `index.html` in any modern browser.
+1. Download all project files into a single root directory.
+2. Ensure your images are located in Assets/Flowers/JPEG/ and named correctly to match the data array in script.js.
+3. To use your own music, replace the placeholder file path in the index.html audio tag.
+4. Open index.html in a web browser or host it on a server like GitHub Pages.
 
-## Customization
+## Deployment Notes
 
-To customize the flowers or messages:
-
-1. Edit the `flowers` array in `script.js`
-```javascript
-const flowers = [
-  {
-    name: "Jasmine",
-    imgSrc: "Assets/Flowers/JPEG/1_Jasmine.jpg",
-    description: "A symbol of purity and sweetness...",
-    tags: ["fragrant", "symbolism"]
-  },
-  // Add more flowers as needed
-];
-```
-
-2. Update the wisdom messages:
-```javascript
-const flowerFacts = [
-  "Jasmine symbolizes purity and grace...",
-  // Add more facts
-];
-```
-
-## Animation Customization
-
-Adjust animation timing in CSS:
-```css
-:root {
-  --wisdom-anim-duration: 0.7s;
-  --wisdom-anim-easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-```
-
-## Color Scheme
-
-Customize colors in CSS variables:
-```css
-:root {
-  --primary: #EC5EAB;
-  --primary-light: #FFE6F0;
-  --text: #1F1F1F;
-  --text-light: #444;
-}
-```
-
-## Responsive Breakpoints
-
-- Mobile: <600px
-- Tablet: 600-992px
-- Desktop: >992px
+When deploying to GitHub Pages, ensure that the Assets folder is uploaded with exact case-sensitivity as referenced in the code. Images must exist within the repository to avoid security blocks during the postcard download process.
 
 ## License
 
-This project is open source under the MIT License.
-
----
-
-**Created with love by Chatura**  
-For Imali and all flower lovers worldwide 🌸
+All rights reserved © 2026 Chatura Dissanayake.
