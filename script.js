@@ -1,26 +1,26 @@
 // ===== DATA =====
 const flowers = [
-  { name: "Jasmine", imgSrc: "Assets/Flowers/1_Jasmine.jpg", description: "The scent of a quiet dawn, a whisper of purity and grace.", tags: ["fragrant", "symbolism", "love", "peace"] },
-  { name: "Lotus", imgSrc: "Assets/Flowers/2_Lotus.jpg", description: "Rising from water to meet the sun, a symbol of the soul's journey.", tags: ["symbolism", "native", "peace", "strength"] },
-  { name: "Hibiscus", imgSrc: "Assets/Flowers/3_Hibiscus.jpg", description: "A fleeting, vibrant bloom that speaks of passionate, delicate beauty.", tags: ["symbolism", "love", "joy"] },
-  { name: "Bougainvillea", imgSrc: "Assets/Flowers/4_Bougainvillea.jpg", description: "A resilient cascade of color, finding joy in the harshest sun.", tags: ["native", "joy", "strength"] },
-  { name: "Plumeria (Araliya)", imgSrc: "Assets/Flowers/5_Plumeria.jpg", description: "Soft petals holding the fragrance of a tropical evening.", tags: ["fragrant", "love", "peace"] },
-  { name: "Water Lily (Nil Mahanel)", imgSrc: "Assets/Flowers/6_WaterLily.jpg", description: "A star floating on a still pond, representing peace and purity.", tags: ["symbolism", "native", "peace"] },
-  { name: "Coconut Flower", imgSrc: "Assets/Flowers/7_CoconutFlower.jpg", description: "The humble heart of the giving tree, a promise of life.", tags: ["native", "strength"] },
-  { name: "Orchid", imgSrc: "Assets/Flowers/8_Orchid.jpg", description: "An elegant and mysterious bloom of rare, silent beauty.", tags: ["rare", "love"] },
-  { name: "Balsam", imgSrc: "Assets/Flowers/9_Balsam.jpg", description: "A delicate touch of kindness, adding subtle love to any garden.", tags: ["native", "love"] },
-  { name: "Cinnamon Flower", imgSrc: "Assets/Flowers/10_CinnamonFlower.jpg", description: "A rare, spicy-sweet scent that evokes warmth and comfort.", tags: ["rare", "native", "joy"] },
-  { name: "Ixora", imgSrc: "Assets/Flowers/11_Ixora.jpg", description: "Fiery clusters that burn with devotion and passionate admiration.", tags: ["symbolism", "native", "love", "strength"] },
-  { name: "Periwinkle", imgSrc: "Assets/Flowers/12_Periwinkle.jpg", description: "A quiet blessing for good fortune and enduring friendship.", tags: ["symbolism", "peace"] },
-  { name: "Plumeria (White)", imgSrc: "Assets/Flowers/13_Plumeria.jpg", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
-  { name: "Karthigaipoo", imgSrc: "Assets/Flowers/14_Karthigaipoo.jpg", description: "A sacred flame of glory, representing divine blessings.", tags: ["symbolism", "native", "strength"] },
-  { name: "Poinsettia", imgSrc: "Assets/Flowers/15_Poinsettia.jpg", description: "The cheerful star of winter, a sign of celebration and good cheer.", tags: ["symbolism", "joy"] },
-  { name: "Wild Ginger", imgSrc: "Assets/Flowers/16_WildGinger.jpg", description: "An exotic treasure hidden beneath lush, tropical leaves.", tags: ["rare", "native"] },
-  { name: "Sunflower", imgSrc: "Assets/Flowers/17_Sunflower.jpg", description: "A bright, joyful face that forever follows the light.", tags: ["symbolism", "joy", "strength"] },
-  { name: "Tuberose", imgSrc: "Assets/Flowers/18_Tuberose.jpg", description: "An intoxicating scent of dangerous pleasure and sensual beauty.", tags: ["fragrant", "rare", "love"] },
-  { name: "Lantana", imgSrc: "Assets/Flowers/19_Lantana.jpg", description: "Clusters of ever-changing color, a dance of transformation.", tags: ["native", "joy"] },
-  { name: "Golden Shower", imgSrc: "Assets/Flowers/20_GoldenShower.jpg", description: "A cascade of gold, symbolizing abundance and the joy of spring.", tags: ["symbolism", "native", "joy"] },
-  { name: "Moringa Flowers", imgSrc: "Assets/Flowers/21_MoringaFlowers.jpg", description: "Delicate blossoms from the 'miracle tree,' a gift of healing.", tags: ["native", "symbolism", "strength", "peace"] }
+  { name: "Jasmine", imgSrc: "./Assets/Flowers/1_Jasmine.webp", description: "The scent of a quiet dawn, a whisper of purity and grace.", tags: ["fragrant", "symbolism", "love", "peace"] },
+  { name: "Lotus", imgSrc: "./Assets/Flowers/2_Lotus.webp", description: "Rising from water to meet the sun, a symbol of the soul's journey.", tags: ["symbolism", "native", "peace", "strength"] },
+  { name: "Hibiscus", imgSrc: "./Assets/Flowers/3_Hibiscus.webp", description: "A fleeting, vibrant bloom that speaks of passionate, delicate beauty.", tags: ["symbolism", "love", "joy"] },
+  { name: "Bougainvillea", imgSrc: "./Assets/Flowers/4_Bougainvillea.webp", description: "A resilient cascade of color, finding joy in the harshest sun.", tags: ["native", "joy", "strength"] },
+  { name: "Plumeria (Araliya)", imgSrc: "./Assets/Flowers/5_Plumeria.webp", description: "Soft petals holding the fragrance of a tropical evening.", tags: ["fragrant", "love", "peace"] },
+  { name: "Water Lily (Nil Mahanel)", imgSrc: "./Assets/Flowers/6_WaterLily.webp", description: "A star floating on a still pond, representing peace and purity.", tags: ["symbolism", "native", "peace"] },
+  { name: "Coconut Flower", imgSrc: "./Assets/Flowers/7_CoconutFlower.webp", description: "The humble heart of the giving tree, a promise of life.", tags: ["native", "strength"] },
+  { name: "Orchid", imgSrc: "./Assets/Flowers/8_Orchid.webp", description: "An elegant and mysterious bloom of rare, silent beauty.", tags: ["rare", "love"] },
+  { name: "Balsam", imgSrc: "./Assets/Flowers/9_Balsam.webp", description: "A delicate touch of kindness, adding subtle love to any garden.", tags: ["native", "love"] },
+  { name: "Cinnamon Flower", imgSrc: "./Assets/Flowers/10_CinnamonFlower.webp", description: "A rare, spicy-sweet scent that evokes warmth and comfort.", tags: ["rare", "native", "joy"] },
+  { name: "Ixora", imgSrc: "./Assets/Flowers/11_Ixora.webp", description: "Fiery clusters that burn with devotion and passionate admiration.", tags: ["symbolism", "native", "love", "strength"] },
+  { name: "Periwinkle", imgSrc: "./Assets/Flowers/12_Periwinkle.webp", description: "A quiet blessing for good fortune and enduring friendship.", tags: ["symbolism", "peace"] },
+  { name: "Plumeria (White)", imgSrc: "./Assets/Flowers/13_Plumeria.webp", description: "A symbol of new beginnings and pure spiritual devotion.", tags: ["fragrant", "symbolism", "peace", "love"] },
+  { name: "Karthigaipoo", imgSrc: "./Assets/Flowers/14_Karthigaipoo.webp", description: "A sacred flame of glory, representing divine blessings.", tags: ["symbolism", "native", "strength"] },
+  { name: "Poinsettia", imgSrc: "./Assets/Flowers/15_Poinsettia.webp", description: "The cheerful star of winter, a sign of celebration and good cheer.", tags: ["symbolism", "joy"] },
+  { name: "Wild Ginger", imgSrc: "./Assets/Flowers/16_WildGinger.webp", description: "An exotic treasure hidden beneath lush, tropical leaves.", tags: ["rare", "native"] },
+  { name: "Sunflower", imgSrc: "./Assets/Flowers/17_Sunflower.webp", description: "A bright, joyful face that forever follows the light.", tags: ["symbolism", "joy", "strength"] },
+  { name: "Tuberose", imgSrc: "./Assets/Flowers/18_Tuberose.webp", description: "An intoxicating scent of dangerous pleasure and sensual beauty.", tags: ["fragrant", "rare", "love"] },
+  { name: "Lantana", imgSrc: "./Assets/Flowers/19_Lantana.webp", description: "Clusters of ever-changing color, a dance of transformation.", tags: ["native", "joy"] },
+  { name: "Golden Shower", imgSrc: "./Assets/Flowers/20_GoldenShower.webp", description: "A cascade of gold, symbolizing abundance and the joy of spring.", tags: ["symbolism", "native", "joy"] },
+  { name: "Moringa Flowers", imgSrc: "./Assets/Flowers/21_MoringaFlowers.webp", description: "Delicate blossoms from the 'miracle tree,' a gift of healing.", tags: ["native", "symbolism", "strength", "peace"] }
 ];
 
 const whispers = [
@@ -167,7 +167,7 @@ function setupFlowerGrid() {
         
         item.innerHTML = `
             <div class="flower-img-container">
-                <img src="${flower.imgSrc}" alt="${flower.name}" crossorigin="anonymous" draggable="false" oncontextmenu="return false;">
+                <img src="${flower.imgSrc}" alt="${flower.name}" draggable="false" oncontextmenu="return false;">
             </div>
             <div class="flower-item-content">
                 <h3 class="flower-name">${flower.name}</h3>
