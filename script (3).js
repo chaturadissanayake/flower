@@ -9,42 +9,42 @@ const flowers = [
     name: "Blue Water Lily",
     category: "peace",
     meaning: "Tranquility & Inner Peace",
-    img: "assets/flowers/jpeg/lily.jpg"
+    img: "Assets/Flowers/JPEG/lily.jpg"
   },
   {
     id: 2,
     name: "Ceylon Ironwood",
     category: "strength",
     meaning: "Strength & Resilience",
-    img: "assets/flowers/jpeg/ironwood.jpg"
+    img: "Assets/Flowers/JPEG/ironwood.jpg"
   },
   {
     id: 3,
     name: "Kandy Orchid",
     category: "love",
     meaning: "Rare Beauty & Deep Love",
-    img: "assets/flowers/jpeg/orchid.jpg"
+    img: "Assets/Flowers/JPEG/orchid.jpg"
   },
   {
     id: 4,
     name: "Temple Flower",
     category: "devotion",
     meaning: "Devotion & Pure Thought",
-    img: "assets/flowers/jpeg/temple.jpg"
+    img: "Assets/Flowers/JPEG/temple.jpg"
   },
   {
     id: 5,
     name: "Wild Jasmine",
     category: "joy",
     meaning: "Joy & Sweet Remembrance",
-    img: "assets/flowers/jpeg/jasmine.jpg"
+    img: "Assets/Flowers/JPEG/jasmine.jpg"
   },
   {
     id: 6,
     name: "Lotus Blossom",
     category: "new_beginnings",
     meaning: "New Beginnings & Grace",
-    img: "assets/flowers/jpeg/lotus.jpg"
+    img: "Assets/Flowers/JPEG/lotus.jpg"
   }
 ];
 
@@ -98,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFlowerGrid();
   initOccasionChips();
   initAnonToggle();
-  if (typeof window !== 'undefined' && window.lucide) {
-    window.lucide.createIcons();
-  }
+  lucide && lucide.createIcons();
 });
 
 // ─── Sticky Header ────────────────────────────────
@@ -133,9 +131,7 @@ function initMobileNav() {
     toggle.innerHTML = isOpen
       ? '<i data-lucide="x"></i>'
       : '<i data-lucide="menu"></i>';
-    if (typeof window !== 'undefined' && window.lucide) {
-      window.lucide.createIcons();
-    }
+    if (typeof lucide !== 'undefined') lucide.createIcons();
   });
 
   // Close on link click
@@ -144,9 +140,7 @@ function initMobileNav() {
       nav.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
       toggle.innerHTML = '<i data-lucide="menu"></i>';
-      if (typeof window !== 'undefined' && window.lucide) {
-        window.lucide.createIcons();
-      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
     });
   });
 }
@@ -176,10 +170,7 @@ function renderFlowerGrid() {
     `;
     card.addEventListener('click', () => openModal(flower));
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openModal(flower);
-      }
+      if (e.key === 'Enter' || e.key === ' ') openModal(flower);
     });
     grid.appendChild(card);
   });
@@ -249,17 +240,17 @@ function openModal(flower) {
   if (!modal) return;
 
   // Set flower data
-  document.getElementById('pcImage').src           = flower.img;
-  document.getElementById('pcImage').alt           = flower.name;
+  document.getElementById('pcImage').src    = flower.img;
+  document.getElementById('pcImage').alt    = flower.name;
   document.getElementById('pcName').textContent    = flower.name;
   document.getElementById('pcMeaning').textContent = flower.meaning;
 
   // Reset fields
-  document.getElementById('pcTo').value            = '';
-  document.getElementById('pcFrom').value          = '';
-  document.getElementById('pcFrom').disabled       = false;
+  document.getElementById('pcTo').value    = '';
+  document.getElementById('pcFrom').value  = '';
+  document.getElementById('pcFrom').disabled = false;
   document.getElementById('pcFrom').classList.remove('anon');
-  document.getElementById('anonToggle').checked    = false;
+  document.getElementById('anonToggle').checked = false;
 
   // Set first template for active occasion
   const msg = document.getElementById('pcMsg');
@@ -267,7 +258,7 @@ function openModal(flower) {
   msg.dataset.autofilled = 'true';
 
   // Mark typed changes as not auto-filled
-  msg.oninput = () => { msg.dataset.autofilled = 'false'; };
+  msg.addEventListener('input', () => { msg.dataset.autofilled = 'false'; }, { once: true });
 
   // Render template chips
   renderTemplateChips(activeOccasion);
@@ -275,10 +266,8 @@ function openModal(flower) {
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  // Only auto-focus on desktop to prevent mobile keyboard layout jumps
-  if (window.innerWidth > 768) {
-    setTimeout(() => document.getElementById('pcTo').focus(), 100);
-  }
+  // Focus the To field
+  setTimeout(() => document.getElementById('pcTo').focus(), 100);
 }
 
 function closeModal() {
@@ -317,27 +306,23 @@ async function generateCanvas() {
   const originalStyles = [];
   inputs.forEach(input => {
     originalStyles.push({
-      border:       input.style.border,
+      border:     input.style.border,
       borderBottom: input.style.borderBottom,
-      background:   input.style.background
+      background: input.style.background
     });
-    input.style.border       = 'none';
+    input.style.border     = 'none';
     input.style.borderBottom = 'none';
-    input.style.background   = 'transparent';
+    input.style.background = 'transparent';
   });
 
-  let canvas = null;
+  let canvas;
   try {
-    if (typeof html2canvas !== 'undefined') {
-      canvas = await html2canvas(element, {
-        scale:           2,
-        backgroundColor: '#FFFEF9',
-        useCORS:         true,
-        logging:         false
-      });
-    } else {
-      console.warn("html2canvas library is not loaded.");
-    }
+    canvas = await html2canvas(element, {
+      scale:           2,
+      backgroundColor: '#FFFEF9',
+      useCORS:         true,
+      logging:         false
+    });
   } catch (err) {
     console.error('Canvas error:', err);
   }
@@ -359,10 +344,7 @@ async function downloadPostcard() {
   if (btn) btn.disabled = true;
 
   const canvas = await generateCanvas();
-  if (!canvas) { 
-    if (btn) btn.disabled = false; 
-    return; 
-  }
+  if (!canvas) { if (btn) btn.disabled = false; return; }
 
   const link = document.createElement('a');
   link.download = `ilys-garden-postcard.png`;
@@ -378,10 +360,7 @@ async function sharePostcard() {
   if (btn) btn.disabled = true;
 
   const canvas = await generateCanvas();
-  if (!canvas) { 
-    if (btn) btn.disabled = false; 
-    return; 
-  }
+  if (!canvas) { if (btn) btn.disabled = false; return; }
 
   canvas.toBlob(async (blob) => {
     const file = new File([blob], `ilys-garden-postcard.png`, { type: 'image/png' });

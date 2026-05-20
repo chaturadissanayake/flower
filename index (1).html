@@ -11,10 +11,10 @@
 
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" defer></script>
-  <script src="assets/js/script.js" defer></script>
 </head>
 <body>
 
+  <!-- ── Header ─────────────────────────────── -->
   <header class="sticky-header" id="stickyHeader">
     <div class="header-container">
       <a href="index.html" class="brand-name">Ily's Garden</a>
@@ -31,6 +31,7 @@
     </div>
   </header>
 
+  <!-- Mobile nav drawer -->
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="#flower-selection">The Garden</a>
@@ -41,9 +42,10 @@
 
   <main>
 
+    <!-- ── Hero ───────────────────────────────── -->
     <section class="hero-section">
       <div class="hero-bg">
-        <img src="assets/slides/slide1.webp" alt="A serene garden in bloom">
+        <img src="Assets/Slides/slide1.webp" alt="A serene garden in bloom">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
@@ -58,6 +60,7 @@
       </div>
     </section>
 
+    <!-- ── How It Works ────────────────────────── -->
     <section id="how-it-works" class="section-padding bg-linen">
       <div class="container">
         <div class="section-intro">
@@ -84,6 +87,7 @@
       </div>
     </section>
 
+    <!-- ── Flower Selection ─────────────────────── -->
     <section id="flower-selection" class="section-padding">
       <div class="container">
         <div class="section-intro">
@@ -95,6 +99,7 @@
       </div>
     </section>
 
+    <!-- ── Quote ──────────────────────────────── -->
     <section class="quote-section">
       <p class="quote-text">"There are always flowers for those who want to see them."</p>
       <p class="quote-attr">— Henri Matisse</p>
@@ -102,6 +107,7 @@
 
   </main>
 
+  <!-- ── Postcard Modal ─────────────────────── -->
   <div id="createPopup" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Create postcard">
     <div class="modal-wrapper">
 
@@ -115,6 +121,7 @@
       <div class="modal-body">
         <div id="postcardElement" class="postcard-container">
 
+          <!-- Left: Flower Art -->
           <div class="postcard-art">
             <div class="pc-corner-ornament"></div>
             <img id="pcImage" class="postcard-art-img" src="" alt="Selected flower">
@@ -125,9 +132,11 @@
             <div class="pc-corner-ornament br"></div>
           </div>
 
+          <!-- Right: Writing Area -->
           <div class="postcard-write">
             <div class="pc-stamp">Ily's<br>Garden</div>
 
+            <!-- Occasion selector -->
             <div>
               <span class="occasion-label">Occasion</span>
               <div class="occasion-chips" id="occasionChips">
@@ -140,11 +149,13 @@
               </div>
             </div>
 
+            <!-- To field -->
             <div class="pc-field">
               <label for="pcTo">To</label>
               <input type="text" id="pcTo" class="pc-input" placeholder="Dear ___,">
             </div>
 
+            <!-- Message field -->
             <div class="pc-field" style="flex:1">
               <label for="pcMsg">Message</label>
               <textarea id="pcMsg" class="pc-textarea" rows="5" placeholder="Write your note here…"></textarea>
@@ -153,6 +164,7 @@
 
             <div class="pc-divider">With love</div>
 
+            <!-- Signature row -->
             <div class="pc-sig-row">
               <span class="pc-sig-prefix">Yours sincerely,</span>
               <input type="text" id="pcFrom" class="pc-input-sig" placeholder="Your name">
@@ -166,7 +178,10 @@
             </div>
 
           </div>
-        </div><div class="modal-actions">
+        </div><!-- /.postcard-container -->
+
+        <!-- Actions -->
+        <div class="modal-actions">
           <button class="btn-outline" id="downloadBtn" onclick="downloadPostcard()">
             <i data-lucide="download" width="15" height="15"></i> Save Image
           </button>
@@ -174,7 +189,13 @@
             <i data-lucide="send" width="15" height="15"></i> Share
           </button>
         </div>
-      </div></div></div><footer id="footer-section">
+      </div><!-- /.modal-body -->
+
+    </div><!-- /.modal-wrapper -->
+  </div><!-- /.modal-overlay -->
+
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer id="footer-section">
     <div class="footer-content">
       <div class="footer-brand">
         <h3>Ily's Garden</h3>
@@ -198,5 +219,11 @@
     </div>
   </footer>
 
+  <script src="assets/js/script.js" defer></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
