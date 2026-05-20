@@ -2,50 +2,29 @@
    ILY'S GARDEN — Main Script
    ============================================= */
 
-// ─── Flower Data ─────────────────────────────────
+// ─── Flower Data (All 21 Blooms) ─────────────────
 const flowers = [
-  {
-    id: 1,
-    name: "Blue Water Lily",
-    category: "peace",
-    meaning: "Tranquility & Inner Peace",
-    img: "Assets/Flowers/JPEG/lily.jpg"
-  },
-  {
-    id: 2,
-    name: "Ceylon Ironwood",
-    category: "strength",
-    meaning: "Strength & Resilience",
-    img: "Assets/Flowers/JPEG/ironwood.jpg"
-  },
-  {
-    id: 3,
-    name: "Kandy Orchid",
-    category: "love",
-    meaning: "Rare Beauty & Deep Love",
-    img: "Assets/Flowers/JPEG/orchid.jpg"
-  },
-  {
-    id: 4,
-    name: "Temple Flower",
-    category: "devotion",
-    meaning: "Devotion & Pure Thought",
-    img: "Assets/Flowers/JPEG/temple.jpg"
-  },
-  {
-    id: 5,
-    name: "Wild Jasmine",
-    category: "joy",
-    meaning: "Joy & Sweet Remembrance",
-    img: "Assets/Flowers/JPEG/jasmine.jpg"
-  },
-  {
-    id: 6,
-    name: "Lotus Blossom",
-    category: "new_beginnings",
-    meaning: "New Beginnings & Grace",
-    img: "Assets/Flowers/JPEG/lotus.jpg"
-  }
+  { id: 1, name: "Wild Jasmine", category: "joy", meaning: "Joy & Sweet Remembrance", img: "assets/Flowers/JPEG/1_Jasmine.jpg" },
+  { id: 2, name: "Lotus Blossom", category: "new_beginnings", meaning: "New Beginnings & Grace", img: "assets/Flowers/JPEG/2_Lotus.jpg" },
+  { id: 3, name: "Crimson Hibiscus", category: "courage", meaning: "Courage & Delicate Beauty", img: "assets/Flowers/JPEG/3_Hibiscus.jpg" },
+  { id: 4, name: "Bougainvillea", category: "passion", meaning: "Passion & Vibrant Spirit", img: "assets/Flowers/JPEG/4_Bougainvillea.jpg" },
+  { id: 5, name: "Plumeria", category: "devotion", meaning: "Devotion & Pure Thought", img: "assets/Flowers/JPEG/5_Plumeria.jpg" },
+  { id: 6, name: "Blue Water Lily", category: "peace", meaning: "Tranquility & Inner Peace", img: "assets/Flowers/JPEG/6_WaterLily.jpg" },
+  { id: 7, name: "Coconut Flower", category: "prosperity", meaning: "Prosperity & Life", img: "assets/Flowers/JPEG/7_CoconutFlower.jpg" },
+  { id: 8, name: "Kandy Orchid", category: "love", meaning: "Rare Beauty & Deep Love", img: "assets/Flowers/JPEG/8_Orchid.jpg" },
+  { id: 9, name: "Balsam", category: "warmth", meaning: "Warmth & Healing", img: "assets/Flowers/JPEG/9_Balsam.jpg" },
+  { id: 10, name: "Cinnamon Flower", category: "comfort", meaning: "Strength & Comfort", img: "assets/Flowers/JPEG/10_CinnamonFlower.jpg" },
+  { id: 11, name: "Ixora", category: "passion", meaning: "Passion & Burning Desire", img: "assets/Flowers/JPEG/11_Ixora.jpg" },
+  { id: 12, name: "Periwinkle", category: "nostalgia", meaning: "Eternal Love & Nostalgia", img: "assets/Flowers/JPEG/12_Periwinkle.jpg" },
+  { id: 13, name: "Primrose", category: "hope", meaning: "Youth & Hope", img: "assets/Flowers/JPEG/13_Primrose.jpg" },
+  { id: 14, name: "Flame Lily", category: "resilience", meaning: "Resilience & Fierce Pride", img: "assets/Flowers/JPEG/14_Karthigaipoo.jpg" },
+  { id: 15, name: "Poinsettia", category: "success", meaning: "Cheer & Success", img: "assets/Flowers/JPEG/15_Poinsettia.jpg" },
+  { id: 16, name: "Wild Ginger", category: "energy", meaning: "Strength & Boundless Energy", img: "assets/Flowers/JPEG/16_WildGinger.jpg" },
+  { id: 17, name: "Sunflower", category: "loyalty", meaning: "Adoration & Loyalty", img: "assets/Flowers/JPEG/17_Sunflower.jpg" },
+  { id: 18, name: "Tuberose", category: "serenity", meaning: "Peace & Sweet Serenity", img: "assets/Flowers/JPEG/18_Tuberose.jpg" },
+  { id: 19, name: "Lantana", category: "brightness", meaning: "Rigor & Brightness", img: "assets/Flowers/JPEG/19_Lantana.jpg" },
+  { id: 20, name: "Golden Shower", category: "wealth", meaning: "Wealth & Joyful Transitions", img: "assets/Flowers/JPEG/20_GoldenShower.jpg" },
+  { id: 21, name: "Moringa Flowers", category: "vitality", meaning: "Nurturance & Vitality", img: "assets/Flowers/JPEG/21_MoringaFlowers.jpg" }
 ];
 
 // ─── Occasion Templates ───────────────────────────
@@ -98,7 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFlowerGrid();
   initOccasionChips();
   initAnonToggle();
-  lucide && lucide.createIcons();
+  if (typeof window !== 'undefined' && window.lucide) {
+    window.lucide.createIcons();
+  }
 });
 
 // ─── Sticky Header ────────────────────────────────
@@ -127,20 +108,20 @@ function initMobileNav() {
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
-    // Swap icon
-    toggle.innerHTML = isOpen
-      ? '<i data-lucide="x"></i>'
-      : '<i data-lucide="menu"></i>';
-    if (typeof lucide !== 'undefined') lucide.createIcons();
+    toggle.innerHTML = isOpen ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+    if (typeof window !== 'undefined' && window.lucide) {
+      window.lucide.createIcons();
+    }
   });
 
-  // Close on link click
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
       toggle.innerHTML = '<i data-lucide="menu"></i>';
-      if (typeof lucide !== 'undefined') lucide.createIcons();
+      if (typeof window !== 'undefined' && window.lucide) {
+        window.lucide.createIcons();
+      }
     });
   });
 }
@@ -158,7 +139,7 @@ function renderFlowerGrid() {
     card.setAttribute('aria-label', `Send a ${flower.name} postcard`);
     card.innerHTML = `
       <div class="flower-card-img-wrap">
-        <img src="${flower.img}" alt="${flower.name}" loading="lazy">
+        <img src="${flower.img}" alt="${flower.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlN2U0ZDEiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzZhN2I2ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTRweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG1pc3Npbmc8L3RleHQ+PC9zdmc+'">
         <div class="flower-card-overlay">
           <span>Create Postcard</span>
         </div>
@@ -170,7 +151,10 @@ function renderFlowerGrid() {
     `;
     card.addEventListener('click', () => openModal(flower));
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') openModal(flower);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(flower);
+      }
     });
     grid.appendChild(card);
   });
@@ -185,7 +169,6 @@ function initOccasionChips() {
       chip.classList.add('active');
       activeOccasion = chip.dataset.occasion;
       renderTemplateChips(activeOccasion);
-      // Auto-fill first template if message is empty or was auto-filled
       const msg = document.getElementById('pcMsg');
       if (msg && (!msg.value || msg.dataset.autofilled === 'true')) {
         msg.value = occasionTemplates[activeOccasion][0];
@@ -202,9 +185,9 @@ function renderTemplateChips(occasion) {
   const templates = occasionTemplates[occasion] || [];
   templates.forEach((tpl, i) => {
     const btn = document.createElement('button');
-    btn.className = 'chip';
-    btn.style.fontSize = '0.68rem';
-    btn.textContent = `Template ${i + 1}`;
+    btn.className = 'chip-template';
+    const preview = tpl.length > 38 ? tpl.slice(0, 38) + '…' : tpl;
+    btn.textContent = preview;
     btn.title = tpl;
     btn.addEventListener('click', () => {
       document.getElementById('pcMsg').value = tpl;
@@ -239,35 +222,30 @@ function openModal(flower) {
   const modal = document.getElementById('createPopup');
   if (!modal) return;
 
-  // Set flower data
-  document.getElementById('pcImage').src    = flower.img;
-  document.getElementById('pcImage').alt    = flower.name;
+  document.getElementById('pcImage').src           = flower.img;
+  document.getElementById('pcImage').alt           = flower.name;
   document.getElementById('pcName').textContent    = flower.name;
   document.getElementById('pcMeaning').textContent = flower.meaning;
 
-  // Reset fields
-  document.getElementById('pcTo').value    = '';
-  document.getElementById('pcFrom').value  = '';
-  document.getElementById('pcFrom').disabled = false;
+  document.getElementById('pcTo').value            = '';
+  document.getElementById('pcFrom').value          = '';
+  document.getElementById('pcFrom').disabled       = false;
   document.getElementById('pcFrom').classList.remove('anon');
-  document.getElementById('anonToggle').checked = false;
+  document.getElementById('anonToggle').checked    = false;
 
-  // Set first template for active occasion
   const msg = document.getElementById('pcMsg');
   msg.value = occasionTemplates[activeOccasion][0];
   msg.dataset.autofilled = 'true';
+  msg.oninput = () => { msg.dataset.autofilled = 'false'; };
 
-  // Mark typed changes as not auto-filled
-  msg.addEventListener('input', () => { msg.dataset.autofilled = 'false'; }, { once: true });
-
-  // Render template chips
   renderTemplateChips(activeOccasion);
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  // Focus the To field
-  setTimeout(() => document.getElementById('pcTo').focus(), 100);
+  if (window.innerWidth > 768) {
+    setTimeout(() => document.getElementById('pcTo').focus(), 100);
+  }
 }
 
 function closeModal() {
@@ -277,7 +255,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// Close on overlay click
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('createPopup');
   if (modal) {
@@ -287,7 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Close on Escape key
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
@@ -297,64 +273,102 @@ async function generateCanvas() {
   const element = document.getElementById('postcardElement');
   if (!element) return null;
 
-  // Hide UI-only elements from canvas
-  const uiOnly = element.querySelectorAll('.pc-corner-ornament, #templateChips, .occasion-label, #occasionChips');
+  // Pre-convert the flower image to a base64 data URL so html2canvas
+  // never has to make a cross-origin request, which would taint the
+  // canvas and produce a damaged/blank image area in the download.
+  const pcImage = document.getElementById('pcImage');
+  const originalSrc = pcImage ? pcImage.src : '';
+  if (pcImage && originalSrc && !originalSrc.startsWith('data:')) {
+    try {
+      const response = await fetch(originalSrc, { mode: 'cors' });
+      const blob = await response.blob();
+      const dataUrl = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+      pcImage.src = dataUrl;
+      await new Promise(r => setTimeout(r, 80)); // let the browser re-paint
+    } catch (e) { /* keep original src if fetch fails */ }
+  }
+
+  const uiOnly = element.querySelectorAll('.pc-corner-ornament, #templateChips, .occasion-label, #occasionChips, .anon-toggle-row');
   uiOnly.forEach(el => el.style.display = 'none');
 
-  // Clean up input borders for capture
+  const artPanel = element.querySelector('.postcard-art');
+  const originalArtBg = artPanel ? artPanel.style.background : '';
+  if (artPanel) artPanel.style.background = '#FFFFFF';
+
   const inputs = element.querySelectorAll('input, textarea, select');
   const originalStyles = [];
   inputs.forEach(input => {
     originalStyles.push({
-      border:     input.style.border,
+      border:       input.style.border,
       borderBottom: input.style.borderBottom,
-      background: input.style.background
+      background:   input.style.background,
+      height:       input.style.height,
+      overflow:     input.style.overflow
     });
-    input.style.border     = 'none';
+    input.style.border       = 'none';
     input.style.borderBottom = 'none';
-    input.style.background = 'transparent';
+    input.style.background   = 'transparent';
+    if (input.tagName === 'TEXTAREA') {
+      input.style.height   = input.scrollHeight + 'px';
+      input.style.overflow = 'visible';
+    }
   });
 
-  let canvas;
+  let canvas = null;
   try {
-    canvas = await html2canvas(element, {
-      scale:           2,
-      backgroundColor: '#FFFEF9',
-      useCORS:         true,
-      logging:         false
-    });
+    if (typeof html2canvas !== 'undefined') {
+      canvas = await html2canvas(element, {
+        scale:           2,
+        backgroundColor: '#FFFEF9',
+        useCORS:         true,
+        logging:         false
+      });
+    }
   } catch (err) {
     console.error('Canvas error:', err);
   }
 
-  // Restore everything
   inputs.forEach((input, i) => {
     input.style.border       = originalStyles[i].border;
     input.style.borderBottom = originalStyles[i].borderBottom;
     input.style.background   = originalStyles[i].background;
+    if (input.tagName === 'TEXTAREA') {
+      input.style.height   = originalStyles[i].height;
+      input.style.overflow = originalStyles[i].overflow;
+    }
   });
   uiOnly.forEach(el => el.style.display = '');
+  if (artPanel) artPanel.style.background = originalArtBg;
+  // Restore the original relative src so the live UI isn't left with a data URL
+  if (pcImage && originalSrc) pcImage.src = originalSrc;
 
   return canvas;
 }
 
-// ─── Download ─────────────────────────────────────
+// ─── Download & Share ────────────────────────────
 async function downloadPostcard() {
   const btn = document.getElementById('downloadBtn');
-  if (btn) btn.disabled = true;
+  const originalHTML = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = 'Saving…'; }
 
   const canvas = await generateCanvas();
-  if (!canvas) { if (btn) btn.disabled = false; return; }
+  if (!canvas) {
+    if (btn) { btn.disabled = false; btn.innerHTML = originalHTML; }
+    return;
+  }
 
   const link = document.createElement('a');
   link.download = `ilys-garden-postcard.png`;
   link.href     = canvas.toDataURL('image/png');
   link.click();
 
-  if (btn) btn.disabled = false;
+  if (btn) { btn.disabled = false; btn.innerHTML = originalHTML; }
 }
 
-// ─── Share ────────────────────────────────────────
 async function sharePostcard() {
   const btn = document.getElementById('shareBtn');
   if (btn) btn.disabled = true;
@@ -373,11 +387,9 @@ async function sharePostcard() {
           files: [file]
         });
       } catch (err) {
-        // User cancelled — that's okay
         if (err.name !== 'AbortError') console.error('Share error:', err);
       }
     } else {
-      // Fallback: trigger download
       const link = document.createElement('a');
       link.download = 'ilys-garden-postcard.png';
       link.href     = canvas.toDataURL('image/png');
